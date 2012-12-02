@@ -41,7 +41,7 @@ public class Main extends Activity {
 		Thread thread1 = new Thread(){
 	    	 public void run(){
 	             try {
-	                 sleep(1000); 
+	                 sleep(1001); 
 	                 
 	                 
 	                 
