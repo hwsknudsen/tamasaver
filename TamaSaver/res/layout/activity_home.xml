@@ -100,4 +100,14 @@
         android:layout_alignParentLeft="true"
         android:src="@drawable/path3890" />
 
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toLeftOf="@+id/button1"
+        android:onClick="buttonClicked2"
+        android:text="Button" />
+
 </RelativeLayout>
