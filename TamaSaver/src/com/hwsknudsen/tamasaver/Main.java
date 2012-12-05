@@ -47,6 +47,7 @@ public class Main extends Activity{
 		}
 
 	};
+	private Thread myThread;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -87,6 +88,9 @@ public class Main extends Activity{
 		});
 
 		myThread.start();
+		
+		
+		
 	}
 
 	@Override
@@ -108,7 +112,7 @@ public class Main extends Activity{
 	}
 
 	public void buttonClicked(View v) {
-		animations.GoTO(new PointF(100,100));
+		animations.rotateto(-45); 
 	}
 
 	public void buttonClicked2(View v) {
@@ -135,7 +139,7 @@ public class Main extends Activity{
 					@Override
 					public void onAnimationStart(Animation arg0) {
 					}
-					
+					 
 				});
 				iv.startAnimation(getAnimation(thisanimation));
 			}
@@ -143,12 +147,20 @@ public class Main extends Activity{
 				iv.setX(thisanimation.point.x);
 				iv.setY(thisanimation.point.y);
 				animationinprogress = 0;
-				update();
+				animationtime = thisanimation.time;
+				//update();
+			}else if (thisanimation.typeflag==4){
+				iv.setRotation(thisanimation.Rotation);
+				animationinprogress = 0;
+				animationtime = thisanimation.time;
+				//update();
 			}
 			else if (thisanimation.typeflag==3){
 				//thisanimation.obA.start();
 			}
 		//animationtime = thisanimation.time;
+		}else{
+			animationtime = 100;
 		}
 	}
 

@@ -21,8 +21,14 @@ public class Actions{
 	ScaleAnimation sa;
 	TranslateAnimation ta;
 	AnimatorSet obA;
+	float Rotation;
 	
 	
+	public Actions(float Rotation, long t){
+		this.Rotation = Rotation;
+		this.time = t;
+		this.typeflag = 4;
+	}
 	
 	public Actions(PointF pointF, long t){
 		this.point = pointF;
