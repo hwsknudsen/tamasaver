@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.PointF;
@@ -17,6 +20,7 @@ import android.widget.ImageView;
 
 public class Main extends Activity{
 
+	final Context context = this;
 
 	public static final String PREFS_NAME = "MyPrefsFile";
 	private boolean firstrun;
@@ -43,9 +47,11 @@ public class Main extends Activity{
 			startActivity(intent);
 		}
 		iv = (ImageView) findViewById(R.id.imageView1);
-		
+
 		currentFace = R.drawable.path3890;
 		iv.setImageResource(currentFace);
+
+
 
 	}
 
@@ -69,8 +75,35 @@ public class Main extends Activity{
 	}
 
 	public void buttonClicked(View v) {
-		animations.GoTO(new PointF(100,100));
-		update();
+
+		 
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+			context);
+
+		// set title
+		alertDialogBuilder.setTitle("Did You Know?");
+
+		// set dialog message
+		alertDialogBuilder
+			.setMessage("Energy Usage IS BAD!")
+			.setCancelable(false)
+			.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					dialog.cancel();
+				}
+			  })
+
+			;
+
+			// create alert dialog
+			AlertDialog alertDialog = alertDialogBuilder.create();
+
+			// show it
+			alertDialog.show();
+	
+		
+//		animations.GoTO(new PointF(100,100));
+//		update();
 	}
 
 	public void buttonClicked2(View v) {
@@ -127,15 +160,6 @@ public class Main extends Activity{
 		update();
 		return true;
 	}
-
-
-
-
-
-
-
-
-	//iv.setImageResource(R.drawable.path3891);
 }
 
 
