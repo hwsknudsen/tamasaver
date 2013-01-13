@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PointF;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,7 +29,7 @@ public class Main extends Activity{
 
 	public static ArrayList<Actions> goingto = new ArrayList<Actions>();
 	public static int currentFace;
-
+	public static int currentmood;
 
 
 	@Override
@@ -40,8 +41,31 @@ public class Main extends Activity{
 		setContentView(R.layout.activity_home);
 
 		firstrun = settings.getBoolean("firstRun", true);
+		String dbname = settings.getString("dbname", "mydb");
+
+		currentmood = settings.getInt("mood", 500);
+
+		
 		// If first run load settings 
+
+		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
+
 		if(firstrun ){
+			// & setup DB 
+			
+			String ActionLIST = "ActionLIST";
+			/* Create a Table in the Database. */
+			myDB.execSQL("CREATE TABLE IF NOT EXISTS "
+					+ ActionLIST 
+					+ " (Field1 VARCHAR, Field2 FLOAT(10));");
+
+			/* Insert data to a Table*/
+			myDB.execSQL("INSERT INTO "
+					+ ActionLIST
+					+ " (Field1, Field2)"
+					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
+
+
 			firstrun = false;
 			Intent intent = new Intent(Main.this,Settings.class);
 			startActivity(intent);
@@ -76,34 +100,39 @@ public class Main extends Activity{
 
 	public void buttonClicked(View v) {
 
-		 
+		//		animations.GoTO(new PointF(100,100));
+		//		update();
+		motdrandom();
+	}
+
+
+	public void motdrandom() {
+		
+		
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-			context);
+				context);
 
 		// set title
 		alertDialogBuilder.setTitle("Did You Know?");
 
 		// set dialog message
 		alertDialogBuilder
-			.setMessage("Energy Usage IS BAD!")
-			.setCancelable(false)
-			.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog,int id) {
-					dialog.cancel();
-				}
-			  })
+		.setMessage("Energy Usage IS BAD!")
+		.setCancelable(false)
+		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+				dialog.cancel();
+			}
+		})
 
-			;
+		;
 
-			// create alert dialog
-			AlertDialog alertDialog = alertDialogBuilder.create();
+		// create alert dialog
+		AlertDialog alertDialog = alertDialogBuilder.create();
 
-			// show it
-			alertDialog.show();
-	
-		
-//		animations.GoTO(new PointF(100,100));
-//		update();
+		// show it
+		alertDialog.show();
+
 	}
 
 	public void buttonClicked2(View v) {
@@ -114,6 +143,17 @@ public class Main extends Activity{
 	}
 
 
+	public void bC1(View v){
+		currentmood =+ 50;
+		animations.Wink();
+		if (currentmood>=600){
+			animations.do360();
+		}
+		//animations.GoTO(new PointF(200,200));
+		update();
+	}
+	
+	
 	private void update() {
 
 		if(!goingto.isEmpty()){
@@ -146,8 +186,6 @@ public class Main extends Activity{
 			}
 		}	
 	}
-
-
 
 
 	@Override
