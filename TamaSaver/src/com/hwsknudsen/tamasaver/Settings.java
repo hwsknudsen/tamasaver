@@ -195,9 +195,11 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
 	        Bundle savedInstanceState) {
 	       
 
-	        
+	    	View view = inflater.inflate(R.layout.setupchoices, container, false);
 	        // Inflate the layout for this fragment
-	        return inflater.inflate(R.layout.setupchoices, container, false);
+	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(true);
+	    	
+	        return view;
 	    }
 	}
     
