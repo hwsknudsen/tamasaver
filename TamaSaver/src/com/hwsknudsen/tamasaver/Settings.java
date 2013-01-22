@@ -10,17 +10,18 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 public class Settings extends FragmentActivity implements ActionBar.TabListener  {
 
-
-	
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
@@ -34,13 +35,19 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
-       
+        
+		//
+
         setContentView(R.layout.activity_main);
+
+        
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -74,7 +81,6 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
                             .setTabListener(this));
         }
         
-    	
 
     }
 
@@ -166,6 +172,7 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
             Bundle args = getArguments();
             textView.setText(Integer.toString(args.getInt(ARG_SECTION_NUMBER)));
         
+            
             return textView;
         }
     }
@@ -180,22 +187,46 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
     	}
     
     public static class Setup extends Fragment {
+
+
+    	
 	    @Override
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	        Bundle savedInstanceState) {
+	       
+
+	        
 	        // Inflate the layout for this fragment
 	        return inflater.inflate(R.layout.setupchoices, container, false);
 	    }
 	}
     
 	public static class Complete extends Fragment {
+		
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	        Bundle savedInstanceState) {
-	    	
-	    	
+
 	    	
 	        return inflater.inflate(R.layout.setupcomplete, container, false);
 	    }
+	}
+	
+	public void tickChange(View V){
+//		switch(V.getId()){
+//	       case R.id.checkBox1 :
+//	    	   Log.e("op", "1");
+//	       case R.id.checkBox2 :
+//	    	   Log.e("op", "2");
+//		}
+        SharedPreferences settings2 = getSharedPreferences(Main.CONFIG_Prefs, 0);
+        SharedPreferences.Editor editor2 = settings2.edit();
+        CheckBox cb1 = (CheckBox) findViewById(V.getId());
+        editor2.putBoolean(V.toString(), cb1.isChecked());
+
+        //Log.e("op", V.toString());
+        // Commit the edits!
+        editor2.commit();
+
 	}
     
 	public void buttonClicked(View v) {

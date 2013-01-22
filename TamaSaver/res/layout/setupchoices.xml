@@ -7,12 +7,15 @@
             android:id="@+id/checkBox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+             android:onClick="tickChange"
+            android:text="@string/renter" />
+        
 
         <CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox" />
+            android:onClick="tickChange"
+            android:text="@string/placeofwork" />
 
     </TableLayout>

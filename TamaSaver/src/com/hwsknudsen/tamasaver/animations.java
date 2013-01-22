@@ -11,19 +11,23 @@ import android.view.animation.TranslateAnimation;
 
 public class animations {
 	public static void jump(){
-		AnimationSet as = new AnimationSet(true);
-		as.setFillEnabled(true);
-		as.setInterpolator(new BounceInterpolator());
+		
+		GoTO(new PointF(getLastLocation().x, getLastLocation().y-50));
+		GoTO(new PointF(getLastLocation().x, getLastLocation().y+50));
 
-		TranslateAnimation ta = new TranslateAnimation(-300, 100, 0, 0); 
-		ta.setDuration(2000);
-		as.addAnimation(ta);
+//		AnimationSet as = new AnimationSet(true);
+//		as.setFillEnabled(true);
+//		as.setInterpolator(new BounceInterpolator());
 
-		TranslateAnimation ta2 = new TranslateAnimation(100, 0, 0, 0); 
-		ta2.setDuration(2000);
-		ta2.setStartOffset(2000); // allowing 2000 milliseconds for ta to finish
-		as.addAnimation(ta2);
-		Main.goingto.add(new Actions(as,null));
+		//TranslateAnimation ta = new TranslateAnimation(-300, 100, 0, 0); 
+		//ta.setDuration(2000);
+		//as.addAnimation(ta);
+
+		//TranslateAnimation ta2 = new TranslateAnimation(100, 0, 0, 0); 
+		//ta2.setDuration(2000);
+		//ta2.setStartOffset(2000); // allowing 2000 milliseconds for ta to finish
+		//as.addAnimation(ta2);
+		//Main.goingto.add(new Actions(as,null));
 	}
 
 	public static void do360() {

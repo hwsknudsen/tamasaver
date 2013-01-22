@@ -17,13 +17,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class Main extends Activity{
 
 	final Context context = this;
 
-	public static final String PREFS_NAME = "MyPrefsFile";
+	public static final String PREFS_NAME = "main_prefs";
+	public static final String CONFIG_Prefs = "config_prefs";
+
 	private boolean firstrun;
 	public static ImageView iv;
 
@@ -31,12 +34,17 @@ public class Main extends Activity{
 	public static int currentFace;
 	public static int currentmood;
 
+	//public static SharedPreferences userconfig;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+
+		
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
 		setContentView(R.layout.activity_home);
 
@@ -144,10 +152,22 @@ public class Main extends Activity{
 
 
 	public void bC1(View v){
-		currentmood =+ 50;
+		currentmood = currentmood + 50;
+		animations.jump();
 		animations.Wink();
 		if (currentmood>=600){
 			animations.do360();
+		}
+		//animations.GoTO(new PointF(200,200));
+		update();
+	}
+	
+	public void bC2(View v){
+		currentmood = currentmood - 50;
+		animations.Wink();
+		if (currentmood<=500){
+			animations.Wink();
+			//animations.jump();
 		}
 		//animations.GoTO(new PointF(200,200));
 		update();
