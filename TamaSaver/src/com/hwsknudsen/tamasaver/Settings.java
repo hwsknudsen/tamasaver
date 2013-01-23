@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.app.Fragment;
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,7 +22,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-public class Settings extends FragmentActivity implements ActionBar.TabListener  {
+public class Settings extends Activity implements ActionBar.TabListener  {
 
 
     /**
@@ -51,7 +51,7 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
         
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
 
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
@@ -113,7 +113,9 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        private String Settings;
+
+		public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -187,43 +189,43 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
     	    }
     	}
     
+   
+
+    public static class Setup extends PreferenceFragment {
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            // Load the preferences from an XML resource
+            addPreferencesFromResource(R.layout.prefrence);
+        }
+    }
     
+//    public static class Setup extends Fragment {
 //
-//    public static class Setup extends PreferenceFragment {
+//    
+//    	
+//	    @Override
+//	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
+//	        Bundle savedInstanceState) {
+//	       
 //
-//        @Override
-//        public void onCreate(Bundle savedInstanceState) {
-//            super.onCreate(savedInstanceState);
+//	    	View view = inflater.inflate(R.layout.setupchoices, container, false);
+//	        // Inflate the layout for this fragment
+//	   		SharedPreferences butttons = this.getActivity().getSharedPreferences(Main.CONFIG_Prefs, 0);
 //
-//            // Load the preferences from an XML resource
-//            addPreferencesFromResource(R.layout.prefrence);
-//        }
-//    }
-    
-    public static class Setup extends Fragment {
-
-    
-    	
-	    @Override
-	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
-	        Bundle savedInstanceState) {
-	       
-
-	    	View view = inflater.inflate(R.layout.setupchoices, container, false);
-	        // Inflate the layout for this fragment
-	   		SharedPreferences butttons = this.getActivity().getSharedPreferences(Main.CONFIG_Prefs, 0);
-
-			boolean cb1 = butttons.getBoolean(view.findViewById(R.id.checkBox1).toString(), true);
-	   		Log.e("op", String.valueOf(cb1));
-	   		Log.e("op1", view.findViewById(R.id.checkBox1).toString());
-
-			//c = .getBoolean("firstRun", true);
-
-	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(cb1);
-	    	
-	        return view;
-	    }
-	}
+//			boolean cb1 = butttons.getBoolean(view.findViewById(R.id.checkBox1).toString(), true);
+//	   		Log.e("op", String.valueOf(cb1));
+//	   		Log.e("op1", view.findViewById(R.id.checkBox1).toString());
+//
+//			//c = .getBoolean("firstRun", true);
+//
+//	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(cb1);
+//	    	
+//	        return view;
+//	    }
+//	}
     
 	public static class Complete extends Fragment {
 		
@@ -256,6 +258,11 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
    		editor2.apply();
 	}
     
+
+
+
+
+
 	public void buttonClicked(View v) {
 		//Log.e("op", "blahs");
 		Intent intent = new Intent(Settings.this,Main.class);
