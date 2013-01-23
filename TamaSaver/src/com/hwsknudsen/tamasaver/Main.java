@@ -34,6 +34,8 @@ public class Main extends Activity{
 	public static int currentFace;
 	public static int currentmood;
 
+	public static SharedPreferences settings2;
+
 	//public static SharedPreferences userconfig;
 
 
@@ -44,6 +46,8 @@ public class Main extends Activity{
 
 		
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+	    SharedPreferences settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
 		setContentView(R.layout.activity_home);

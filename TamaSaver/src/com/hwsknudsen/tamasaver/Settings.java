@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -36,7 +38,6 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
      */
     ViewPager mViewPager;
     
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -186,9 +187,22 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
     	    }
     	}
     
+    
+//
+//    public static class Setup extends PreferenceFragment {
+//
+//        @Override
+//        public void onCreate(Bundle savedInstanceState) {
+//            super.onCreate(savedInstanceState);
+//
+//            // Load the preferences from an XML resource
+//            addPreferencesFromResource(R.layout.prefrence);
+//        }
+//    }
+    
     public static class Setup extends Fragment {
 
-
+    
     	
 	    @Override
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
@@ -197,7 +211,15 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
 
 	    	View view = inflater.inflate(R.layout.setupchoices, container, false);
 	        // Inflate the layout for this fragment
-	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(true);
+	   		SharedPreferences butttons = this.getActivity().getSharedPreferences(Main.CONFIG_Prefs, 0);
+
+			boolean cb1 = butttons.getBoolean(view.findViewById(R.id.checkBox1).toString(), true);
+	   		Log.e("op", String.valueOf(cb1));
+	   		Log.e("op1", view.findViewById(R.id.checkBox1).toString());
+
+			//c = .getBoolean("firstRun", true);
+
+	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(cb1);
 	    	
 	        return view;
 	    }
@@ -220,15 +242,18 @@ public class Settings extends FragmentActivity implements ActionBar.TabListener 
 //	       case R.id.checkBox2 :
 //	    	   Log.e("op", "2");
 //		}
-        SharedPreferences settings2 = getSharedPreferences(Main.CONFIG_Prefs, 0);
+	    SharedPreferences settings2 = getSharedPreferences(Main.CONFIG_Prefs, 0);
+
         SharedPreferences.Editor editor2 = settings2.edit();
         CheckBox cb1 = (CheckBox) findViewById(V.getId());
         editor2.putBoolean(V.toString(), cb1.isChecked());
 
-        //Log.e("op", V.toString());
-        // Commit the edits!
-        editor2.commit();
+        Log.e("opq", V.toString());
+   		Log.e("opd", String.valueOf(cb1.isChecked()));
 
+        // Commit the edits!
+        //editor2.commit();
+   		editor2.apply();
 	}
     
 	public void buttonClicked(View v) {

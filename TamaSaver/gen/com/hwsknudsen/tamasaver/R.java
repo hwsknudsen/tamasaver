@@ -51,9 +51,10 @@ public final class R {
         public static final int activity_home=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int fragmentwelcome=0x7f030002;
-        public static final int setupchoices=0x7f030003;
-        public static final int setupcomplete=0x7f030004;
-        public static final int tamalayout=0x7f030005;
+        public static final int prefrence=0x7f030003;
+        public static final int setupchoices=0x7f030004;
+        public static final int setupcomplete=0x7f030005;
+        public static final int tamalayout=0x7f030006;
     }
     public static final class menu {
         public static final int activity_home=0x7f060000;
