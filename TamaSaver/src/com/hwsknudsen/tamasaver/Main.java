@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,12 +21,11 @@ import android.widget.ImageView;
 
 public class Main extends Activity{
 
-	final Context context = this;
-
 	public static final String PREFS_NAME = "main_prefs";
 	public static final String CONFIG_Prefs = "config_prefs";
 
-	private boolean firstrun;
+	Game data = new Game(this);
+
 	public static ImageView iv;
 
 	public static ArrayList<Actions> goingto = new ArrayList<Actions>();
@@ -52,7 +50,7 @@ public class Main extends Activity{
 
 		setContentView(R.layout.activity_home);
 
-		firstrun = settings.getBoolean("firstRun", true);
+		data.firstrun = settings.getBoolean("firstRun", true);
 		String dbname = settings.getString("dbname", "mydb");
 
 		currentmood = settings.getInt("mood", 500);
@@ -62,7 +60,7 @@ public class Main extends Activity{
 
 		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
-		if(firstrun ){
+		if(data.firstrun ){
 			// & setup DB 
 			
 			String ActionLIST = "ActionLIST";
@@ -78,7 +76,7 @@ public class Main extends Activity{
 					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
 
 
-			firstrun = false;
+			data.firstrun = false;
 			Intent intent = new Intent(Main.this,Settings.class);
 			startActivity(intent);
 		}
@@ -114,15 +112,18 @@ public class Main extends Activity{
 
 		//		animations.GoTO(new PointF(100,100));
 		//		update();
-		motdrandom();
+		//motdrandom();
+		
+		Game.myGame(data.context);
 	}
+
 
 
 	public void motdrandom() {
 		
 		
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-				context);
+				data.context);
 
 		// set title
 		alertDialogBuilder.setTitle("Did You Know?");

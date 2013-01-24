@@ -3,8 +3,21 @@
     android:layout_height="match_parent" >
 
     <CheckBoxPreference
-        android:key="pref_sync"
-        android:title="a"
-        android:summary="a"
-        android:defaultValue="true" />
+        android:defaultValue="false"
+        android:key="home"
+        android:summary=""
+        android:title="@string/renter" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="work"
+        android:summary=""
+        android:title="@string/placeofwork" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="Extra"
+        android:summary="Extra"
+        android:title="Extra" />
+
 </PreferenceScreen>
