@@ -23,8 +23,6 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 public class Settings extends Activity implements ActionBar.TabListener  {
-
-
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
      * sections. We use a {@link android.support.v4.app.FragmentPagerAdapter} derivative, which will
@@ -43,12 +41,7 @@ public class Settings extends Activity implements ActionBar.TabListener  {
     public void onCreate(Bundle savedInstanceState) {
     	
         super.onCreate(savedInstanceState);
-        
-		//
-
         setContentView(R.layout.activity_main);
-
-        
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
@@ -81,20 +74,13 @@ public class Settings extends Activity implements ActionBar.TabListener  {
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
-        
-
     }
-
-
-
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-
-    
 
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
@@ -130,8 +116,6 @@ public class Settings extends Activity implements ActionBar.TabListener  {
         	}
         	else if(i==2){
         		fragment = new Complete();
-//   	
-        		
 //	            fragment = new DummySectionFragment();
 //	            Bundle args = new Bundle();
 //	            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i+1);
@@ -184,7 +168,6 @@ public class Settings extends Activity implements ActionBar.TabListener  {
     	    @Override
     	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
     	        Bundle savedInstanceState) {
-    	        // Inflate the layout for this fragment
     	        return inflater.inflate(R.layout.fragmentwelcome, container, false);
     	    }
     	}
@@ -196,79 +179,26 @@ public class Settings extends Activity implements ActionBar.TabListener  {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.layout.prefrence);
         }
     }
     
-//    public static class Setup extends Fragment {
-//
-//    
-//    	
-//	    @Override
-//	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
-//	        Bundle savedInstanceState) {
-//	       
-//
-//	    	View view = inflater.inflate(R.layout.setupchoices, container, false);
-//	        // Inflate the layout for this fragment
-//	   		SharedPreferences butttons = this.getActivity().getSharedPreferences(Main.CONFIG_Prefs, 0);
-//
-//			boolean cb1 = butttons.getBoolean(view.findViewById(R.id.checkBox1).toString(), true);
-//	   		Log.e("op", String.valueOf(cb1));
-//	   		Log.e("op1", view.findViewById(R.id.checkBox1).toString());
-//
-//			//c = .getBoolean("firstRun", true);
-//
-//	        ((CompoundButton) view.findViewById(R.id.checkBox1)).setChecked(cb1);
-//	    	
-//	        return view;
-//	    }
-//	}
     
 	public static class Complete extends Fragment {
 		
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, 
 	        Bundle savedInstanceState) {
-
-	    	
 	        return inflater.inflate(R.layout.setupcomplete, container, false);
 	    }
 	}
 	
-	public void tickChange(View V){
-//		switch(V.getId()){
-//	       case R.id.checkBox1 :
-//	    	   Log.e("op", "1");
-//	       case R.id.checkBox2 :
-//	    	   Log.e("op", "2");
-//		}
-	    SharedPreferences settings2 = getSharedPreferences(Main.CONFIG_Prefs, 0);
-
-        SharedPreferences.Editor editor2 = settings2.edit();
-        CheckBox cb1 = (CheckBox) findViewById(V.getId());
-        editor2.putBoolean(V.toString(), cb1.isChecked());
-
-        Log.e("opq", V.toString());
-   		Log.e("opd", String.valueOf(cb1.isChecked()));
-
-        // Commit the edits!
-        //editor2.commit();
-   		editor2.apply();
-	}
-    
-
-
-
-
 
 	public void buttonClicked(View v) {
 		//Log.e("op", "blahs");
 		Intent intent = new Intent(Settings.this,Main.class);
         startActivity(intent);
         
-
 
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context

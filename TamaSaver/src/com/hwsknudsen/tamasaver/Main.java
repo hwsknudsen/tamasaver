@@ -1,15 +1,28 @@
 package com.hwsknudsen.tamasaver;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PointF;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -25,6 +38,8 @@ public class Main extends Activity{
 	public static final String CONFIG_Prefs = "config_prefs";
 
 	Game data = new Game(this);
+	private SQLiteDatabase myDB;
+	private String ActionLIST;
 
 	public static ImageView iv;
 
@@ -42,9 +57,9 @@ public class Main extends Activity{
 		super.onCreate(savedInstanceState);
 
 
-		
+
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-	    SharedPreferences settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+		SharedPreferences settings2 = getSharedPreferences(CONFIG_Prefs, 0);
 
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
@@ -55,19 +70,20 @@ public class Main extends Activity{
 
 		currentmood = settings.getInt("mood", 500);
 
-		
+
 		// If first run load settings 
 
 		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
+		String ActionLIST = "ActionLIST";
+
 		if(data.firstrun ){
 			// & setup DB 
-			
-			String ActionLIST = "ActionLIST";
+
 			/* Create a Table in the Database. */
 			myDB.execSQL("CREATE TABLE IF NOT EXISTS "
 					+ ActionLIST 
-					+ " (Field1 VARCHAR, Field2 FLOAT(10));");
+					+ " (Field1 TEXT, Field2 FLOAT(10));");
 
 			/* Insert data to a Table*/
 			myDB.execSQL("INSERT INTO "
@@ -75,16 +91,62 @@ public class Main extends Activity{
 					+ " (Field1, Field2)"
 					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
 
+			InputStream is = getResources().openRawResource(R.raw.thecarbondata);
+			try {
+				populatedbfrom(is);
+			} catch (ParserConfigurationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SAXException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-			data.firstrun = false;
-			Intent intent = new Intent(Main.this,Settings.class);
-			startActivity(intent);
+		}else{
+			Game.motdrandom(data.context);
+
 		}
 		iv = (ImageView) findViewById(R.id.imageView1);
 
 		currentFace = R.drawable.path3890;
 		iv.setImageResource(currentFace);
 
+
+	}
+
+
+	private void populatedbfrom(InputStream is) throws ParserConfigurationException, SAXException, IOException {
+		// TODO Auto-generated method stub
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = factory.newDocumentBuilder();
+		Document dom = db.parse(is); 
+		NodeList mynodes = dom.getElementsByTagName("Row");
+
+		for (int i = 0; i < mynodes.getLength(); i++) { 
+			Node aNode = mynodes.item(i); 
+			Element element = (Element) aNode;
+
+			//aNode.getChildNodes().item(0));
+			//Log.e("1", aNode.getFirstChild().getNodeName());
+			String text = aNode.getChildNodes().item(1).getTextContent();
+			String value = aNode.getChildNodes().item(2).getTextContent();
+
+			//Log.e("1", text);
+
+
+			//text = "hello";
+//			/* Insert data to a Table*/
+//			myDB.execSQL("INSERT INTO "
+//					+ ActionLIST
+//					+ " (Field1, Field2)"
+//					+ " VALUES ('"
+//					+ text
+//					+ "', 2.512);");
+
+		} 
 
 
 	}
@@ -113,40 +175,11 @@ public class Main extends Activity{
 		//		animations.GoTO(new PointF(100,100));
 		//		update();
 		//motdrandom();
-		
+
 		Game.myGame(data.context);
 	}
 
 
-
-	public void motdrandom() {
-		
-		
-		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-				data.context);
-
-		// set title
-		alertDialogBuilder.setTitle("Did You Know?");
-
-		// set dialog message
-		alertDialogBuilder
-		.setMessage("Energy Usage IS BAD!")
-		.setCancelable(false)
-		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog,int id) {
-				dialog.cancel();
-			}
-		})
-
-		;
-
-		// create alert dialog
-		AlertDialog alertDialog = alertDialogBuilder.create();
-
-		// show it
-		alertDialog.show();
-
-	}
 
 	public void buttonClicked2(View v) {
 		animations.do360();
@@ -166,7 +199,7 @@ public class Main extends Activity{
 		//animations.GoTO(new PointF(200,200));
 		update();
 	}
-	
+
 	public void bC2(View v){
 		currentmood = currentmood - 50;
 		animations.Wink();
@@ -177,8 +210,8 @@ public class Main extends Activity{
 		//animations.GoTO(new PointF(200,200));
 		update();
 	}
-	
-	
+
+
 	private void update() {
 
 		if(!goingto.isEmpty()){
@@ -211,8 +244,7 @@ public class Main extends Activity{
 			}
 		}	
 	}
-
-
+	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		//Log.e("hi","hi");

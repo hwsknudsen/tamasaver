@@ -1,6 +1,7 @@
 package com.hwsknudsen.tamasaver;
 
 import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -69,6 +70,35 @@ public class Game {
 //
 //		// show it
 //		alertDialog.show();
+	}
+
+	public static void motdrandom(Context context) {
+		
+		
+		Builder alertDialogBuilder = new Builder(
+				context);
+	
+		// set title
+		alertDialogBuilder.setTitle("Did You Know?");
+	
+		// set dialog message
+		alertDialogBuilder
+		.setMessage("Energy Usage IS BAD!")
+		.setCancelable(false)
+		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog,int id) {
+				dialog.cancel();
+			}
+		})
+	
+		;
+	
+		// create alert dialog
+		AlertDialog alertDialog = alertDialogBuilder.create();
+	
+		// show it
+		alertDialog.show();
+	
 	}
 
 
