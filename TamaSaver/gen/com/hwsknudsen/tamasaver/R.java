@@ -39,11 +39,12 @@ public final class R {
         public static final int LinearLayout01=0x7f080001;
         public static final int LinearLayout02=0x7f080008;
         public static final int button1=0x7f080007;
-        public static final int checkBox1=0x7f080010;
-        public static final int checkBox2=0x7f080011;
+        public static final int checkBox1=0x7f080011;
+        public static final int checkBox2=0x7f080012;
         public static final int imageView1=0x7f080000;
+        public static final int imageView2=0x7f080010;
         public static final int imageView3=0x7f08000f;
-        public static final int menu_settings=0x7f080012;
+        public static final int menu_settings=0x7f080013;
         public static final int pager=0x7f08000d;
         public static final int textView1=0x7f08000e;
     }
@@ -51,10 +52,11 @@ public final class R {
         public static final int activity_home=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int fragmentwelcome=0x7f030002;
-        public static final int prefrence=0x7f030003;
-        public static final int setupchoices=0x7f030004;
-        public static final int setupcomplete=0x7f030005;
-        public static final int tamalayout=0x7f030006;
+        public static final int gameoverlay=0x7f030003;
+        public static final int prefrence=0x7f030004;
+        public static final int setupchoices=0x7f030005;
+        public static final int setupcomplete=0x7f030006;
+        public static final int tamalayout=0x7f030007;
     }
     public static final class menu {
         public static final int activity_home=0x7f070000;

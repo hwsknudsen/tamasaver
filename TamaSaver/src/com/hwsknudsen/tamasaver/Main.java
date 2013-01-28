@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -38,7 +39,6 @@ public class Main extends Activity{
 	public static final String CONFIG_Prefs = "config_prefs";
 
 	Game data = new Game(this);
-	private SQLiteDatabase myDB;
 	private String ActionLIST;
 
 	public static ImageView iv;
@@ -86,14 +86,16 @@ public class Main extends Activity{
 					+ " (Field1 TEXT, Field2 FLOAT(10));");
 
 			/* Insert data to a Table*/
-			myDB.execSQL("INSERT INTO "
-					+ ActionLIST
-					+ " (Field1, Field2)"
-					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
+//			myDB.execSQL("INSERT INTO "
+//					+ ActionLIST
+//					+ " (Field1, Field2)"
+//					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
 
 			InputStream is = getResources().openRawResource(R.raw.thecarbondata);
 			try {
-				populatedbfrom(is);
+				ContentValues insertValues = populatedbfrom(is);
+				myDB.insert(ActionLIST, null, insertValues);
+
 			} catch (ParserConfigurationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -118,13 +120,16 @@ public class Main extends Activity{
 	}
 
 
-	private void populatedbfrom(InputStream is) throws ParserConfigurationException, SAXException, IOException {
+	private ContentValues populatedbfrom(InputStream is) throws ParserConfigurationException, SAXException, IOException {
 		// TODO Auto-generated method stub
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = factory.newDocumentBuilder();
 		Document dom = db.parse(is); 
 		NodeList mynodes = dom.getElementsByTagName("Row");
 
+		ContentValues insertValues = new ContentValues();
+
+		
 		for (int i = 0; i < mynodes.getLength(); i++) { 
 			Node aNode = mynodes.item(i); 
 			Element element = (Element) aNode;
@@ -134,11 +139,11 @@ public class Main extends Activity{
 			String text = aNode.getChildNodes().item(1).getTextContent();
 			String value = aNode.getChildNodes().item(2).getTextContent();
 
-			//Log.e("1", text);
-
 
 			//text = "hello";
-//			/* Insert data to a Table*/
+			/* Insert data to a Table*/
+			insertValues.put(text,value);
+			//myDB.insertOrThrow(ActionLIST, text, value);
 //			myDB.execSQL("INSERT INTO "
 //					+ ActionLIST
 //					+ " (Field1, Field2)"
@@ -147,7 +152,9 @@ public class Main extends Activity{
 //					+ "', 2.512);");
 
 		} 
-
+		//Log.e("debug123", "hello");
+		return insertValues;
+		//myDB.insert(ActionLIST, null, insertValues);
 
 	}
 
