@@ -5,6 +5,9 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.widget.Toast;
 
 public class Game {
@@ -16,7 +19,22 @@ public class Game {
 	}
 
 	public static void myGame(Context context) {
-		final CharSequence[] items = {"Walking", "Turning Down The Heating", "Turning Off a Light"};
+		
+		Log.e("12", Main.dbname);
+		//context.myDB
+		
+		//SQLiteDatabase myDB = openOrCreateDatabase(Main.dbname, Main.MODE_PRIVATE, null);
+				
+//		Cursor mythree = myDB.rawQuery("SELECT * FROM ActionLIST ORDER BY RANDOM() LIMIT 3", null);
+//		
+//		String one = mythree.getColumnName(0).toString();
+//		mythree.moveToNext();
+//		String two  = mythree.getColumnName(0).toString();
+//		mythree.moveToNext();
+//		String three =mythree.getColumnName(0).toString();
+//
+//		
+		final CharSequence[] items = {"one", "two", "three"};
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				context);

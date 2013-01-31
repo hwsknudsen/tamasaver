@@ -48,8 +48,9 @@ public class Main extends Activity{
 	public static int currentmood;
 
 	public static SharedPreferences settings2;
-
+	//public static String dbname;
 	//public static SharedPreferences userconfig;
+	public static String dbname;
 
 
 	@Override
@@ -66,17 +67,18 @@ public class Main extends Activity{
 		setContentView(R.layout.activity_home);
 
 		data.firstrun = settings.getBoolean("firstRun", true);
-		String dbname = settings.getString("dbname", "mydb");
+		this.dbname = settings.getString("dbname", "mydb");
 
 		currentmood = settings.getInt("mood", 500);
 
 
 		// If first run load settings 
 
-		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
 		String ActionLIST = "ActionLIST";
+		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
+		
 		if(data.firstrun ){
 			// & setup DB 
 
@@ -93,8 +95,36 @@ public class Main extends Activity{
 
 			InputStream is = getResources().openRawResource(R.raw.thecarbondata);
 			try {
-				ContentValues insertValues = populatedbfrom(is);
-				myDB.insert(ActionLIST, null, insertValues);
+				
+				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder db = factory.newDocumentBuilder();
+				Document dom = db.parse(is); 
+				NodeList mynodes = dom.getElementsByTagName("Row");
+
+				ContentValues insertValues = new ContentValues();
+				
+				for (int i = 0; i < mynodes.getLength(); i++) { 
+					Node aNode = mynodes.item(i); 
+					Element element = (Element) aNode;
+
+					String text = aNode.getChildNodes().item(1).getTextContent();
+					String value = aNode.getChildNodes().item(3).getTextContent();
+
+					insertValues.put("Field1",text);
+					insertValues.put("Field2",Float.parseFloat(value));
+					
+					
+					//Log.e("hi",value);
+
+					
+					myDB.insert(ActionLIST, null, insertValues);
+					
+
+				} 
+				
+				//myDB.close();
+
+				//ContentValues insertValues = populatedbfrom(is);
 
 			} catch (ParserConfigurationException e) {
 				// TODO Auto-generated catch block
@@ -120,43 +150,7 @@ public class Main extends Activity{
 	}
 
 
-	private ContentValues populatedbfrom(InputStream is) throws ParserConfigurationException, SAXException, IOException {
-		// TODO Auto-generated method stub
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder db = factory.newDocumentBuilder();
-		Document dom = db.parse(is); 
-		NodeList mynodes = dom.getElementsByTagName("Row");
 
-		ContentValues insertValues = new ContentValues();
-
-		
-		for (int i = 0; i < mynodes.getLength(); i++) { 
-			Node aNode = mynodes.item(i); 
-			Element element = (Element) aNode;
-
-			//aNode.getChildNodes().item(0));
-			//Log.e("1", aNode.getFirstChild().getNodeName());
-			String text = aNode.getChildNodes().item(1).getTextContent();
-			String value = aNode.getChildNodes().item(2).getTextContent();
-
-
-			//text = "hello";
-			/* Insert data to a Table*/
-			insertValues.put(text,value);
-			//myDB.insertOrThrow(ActionLIST, text, value);
-//			myDB.execSQL("INSERT INTO "
-//					+ ActionLIST
-//					+ " (Field1, Field2)"
-//					+ " VALUES ('"
-//					+ text
-//					+ "', 2.512);");
-
-		} 
-		//Log.e("debug123", "hello");
-		return insertValues;
-		//myDB.insert(ActionLIST, null, insertValues);
-
-	}
 
 
 	@Override
@@ -182,7 +176,7 @@ public class Main extends Activity{
 		//		animations.GoTO(new PointF(100,100));
 		//		update();
 		//motdrandom();
-
+		//startGame();
 		Game.myGame(data.context);
 	}
 
@@ -262,6 +256,11 @@ public class Main extends Activity{
 		update();
 		return true;
 	}
+
+
+
+
+
 }
 
 
