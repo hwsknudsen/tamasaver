@@ -40,6 +40,8 @@ public class Main extends Activity{
 
 	Game data = new Game(this);
 	private String ActionLIST;
+	private SharedPreferences settings;
+	static SQLiteDatabase myDB;
 
 	public static ImageView iv;
 
@@ -59,8 +61,8 @@ public class Main extends Activity{
 
 
 
-		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-		SharedPreferences settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+		settings = getSharedPreferences(PREFS_NAME, 0);
+		settings2 = getSharedPreferences(CONFIG_Prefs, 0);
 
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
@@ -76,7 +78,7 @@ public class Main extends Activity{
 
 
 		String ActionLIST = "ActionLIST";
-		SQLiteDatabase myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
+		myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
 		
 		if(data.firstrun ){

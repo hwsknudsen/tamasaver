@@ -20,21 +20,30 @@ public class Game {
 
 	public static void myGame(Context context) {
 		
-		Log.e("12", Main.dbname);
 		//context.myDB
-		
 		//SQLiteDatabase myDB = openOrCreateDatabase(Main.dbname, Main.MODE_PRIVATE, null);
 				
-//		Cursor mythree = myDB.rawQuery("SELECT * FROM ActionLIST ORDER BY RANDOM() LIMIT 3", null);
+		Cursor mythree = Main.myDB.rawQuery("SELECT * FROM ActionLIST ORDER BY RANDOM() LIMIT 3", null);
+		//mythree.moveToNext();
+		//getColumnIndex
+		
+		mythree.moveToFirst();
+
+		String one = mythree.getString(mythree.getColumnIndex("Field1"));
+		float onedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+
+		mythree.moveToNext();
+		String two  = mythree.getString(mythree.getColumnIndex("Field1"));
+		float twodata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+
+		mythree.moveToNext();
+		String three = mythree.getString(mythree.getColumnIndex("Field1"));
+		float threedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+
+		//Log.e("12", mythree.getString(mythree.getColumnIndex("Field1")));
+
 //		
-//		String one = mythree.getColumnName(0).toString();
-//		mythree.moveToNext();
-//		String two  = mythree.getColumnName(0).toString();
-//		mythree.moveToNext();
-//		String three =mythree.getColumnName(0).toString();
-//
-//		
-		final CharSequence[] items = {"one", "two", "three"};
+		final CharSequence[] items = {one, two, three};
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				context);
@@ -42,6 +51,9 @@ public class Game {
 		
 		builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
+				
+				
+				
 				dialog.cancel();
 			}
 		});
