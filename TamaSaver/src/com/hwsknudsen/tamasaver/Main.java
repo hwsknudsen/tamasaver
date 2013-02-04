@@ -32,6 +32,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Main extends Activity{
 
@@ -49,6 +50,7 @@ public class Main extends Activity{
 	public static int currentFace;
 	public static int currentmood;
 
+	
 	public static SharedPreferences settings2;
 	//public static String dbname;
 	//public static SharedPreferences userconfig;
@@ -193,7 +195,7 @@ public class Main extends Activity{
 
 
 	public void bC1(View v){
-		currentmood = currentmood + 50;
+		changemoodby(50);
 		animations.jump();
 		animations.Wink();
 		if (currentmood>=600){
@@ -204,7 +206,7 @@ public class Main extends Activity{
 	}
 
 	public void bC2(View v){
-		currentmood = currentmood - 50;
+		changemoodby(-50);
 		animations.Wink();
 		if (currentmood<=500){
 			animations.Wink();
@@ -263,6 +265,17 @@ public class Main extends Activity{
 
 
 
-}
+	public static void changemoodby(int d) {
+		// TODO Auto-generated method stub
+		currentmood = currentmood + d;
+		//save back to settings two 
+		Log.e("moodupdate", String.valueOf(currentmood));
+	}
 
+
+
+
+
+
+}
 
