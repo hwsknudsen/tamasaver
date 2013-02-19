@@ -13,4 +13,5 @@
 	<string name="prefsfilename">prefsfile</string>
 	<string name="renter">Do you Live in Rented Accomidation </string>
 	<string name="placeofwork">Do You work In an Institution?</string>
+	<string name="gamebutton">Game</string>
 </resources>

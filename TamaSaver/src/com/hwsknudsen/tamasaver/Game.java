@@ -79,9 +79,10 @@ public class Game {
 			}
 		});
 
-		builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+		builder.setNegativeButton("Skip",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
 				dialog.cancel();
+				Game.myGame(Game.context);
 			}
 		});
 

@@ -175,46 +175,77 @@ public class Main extends Activity{
 		}
 	}
 
-	public void buttonClicked(View v) {
+//	public void buttonClicked(View v) {
+//
+//		//		animations.GoTO(new PointF(100,100));
+//		//		update();
+//		//motdrandom();
+//		//startGame();
+//		Game.myGame(data.context);
+//	}
+//
+//
+//
+//	public void buttonClicked2(View v) {
+//		animations.do360();
+//		//animations.GoTO(new PointF(200,200));
+//		update();
+//
+//	}
 
-		//		animations.GoTO(new PointF(100,100));
-		//		update();
-		//motdrandom();
-		//startGame();
+	
+	public void bCLight(View v){
+		Game.motdrandom(data.context);
+	}
+	
+	public void bCHeat(View v){
+		Game.motdrandom(data.context);
+	}
+
+	public void bCElectronic(View v){
+		Game.motdrandom(data.context);
+	}
+	
+	public void bCMotd(View v){
+		Game.motdrandom(data.context);
+	}
+	
+	public void bCAppliance(View v){
+		Game.motdrandom(data.context);
+	}
+	
+	public void bCWater(View v){
+		Game.motdrandom(data.context);
+	}
+	
+	public void bCWalking(View v){
+		Game.motdrandom(data.context);
+	}
+
+	public void bCGame(View v){
 		Game.myGame(data.context);
 	}
-
-
-
-	public void buttonClicked2(View v) {
-		animations.do360();
-		//animations.GoTO(new PointF(200,200));
-		update();
-
-	}
-
-
-	public void bC1(View v){
-		changemoodby(50);
-		animations.jump();
-		animations.Wink();
-		if (currentmood>=600){
-			animations.do360();
-		}
-		//animations.GoTO(new PointF(200,200));
-		update();
-	}
-
-	public void bC2(View v){
-		changemoodby(-50);
-		animations.Wink();
-		if (currentmood<=500){
-			animations.Wink();
-			//animations.jump();
-		}
-		//animations.GoTO(new PointF(200,200));
-		update();
-	}
+//	public void bC1(View v){
+//		changemoodby(50);
+//		animations.jump();
+//		animations.Wink();
+//		if (currentmood>=600){
+//			animations.do360();
+//		}
+//		//animations.GoTO(new PointF(200,200));
+//		update();
+//	}
+//
+//	public void bC2(View v){
+//		changemoodby(-50);
+//		animations.Wink();
+//		if (currentmood<=500){
+//			animations.Wink();
+//			//animations.jump();
+//		}
+//		//animations.GoTO(new PointF(200,200));
+//		update();
+//	}
 
 
 	private void update() {

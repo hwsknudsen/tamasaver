@@ -76,6 +76,7 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int complete=0x7f050009;
+        public static final int gamebutton=0x7f05000d;
         public static final int hello_world=0x7f050004;
         public static final int menu_settings=0x7f050005;
         public static final int placeofwork=0x7f05000c;

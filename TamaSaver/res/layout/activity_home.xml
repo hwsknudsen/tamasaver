@@ -24,26 +24,31 @@
             android:id="@+id/ImageButton02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="bC2"
+            android:onClick="bCAppliance"
             android:src="@drawable/appliance" />
 
         <ImageButton
             android:id="@+id/ImageButton01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="bCWater"
             android:src="@drawable/raindrop" />
 
         <ImageButton
             android:id="@+id/ImageButton07"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="bCWalking"
             android:src="@drawable/walking" />
 
         <ImageButton
             android:id="@+id/ImageButton03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/gamebutton"
+            android:onClick="bCGame"
             android:src="@drawable/dice" />
+
     </LinearLayout>
 
     <Button
@@ -76,26 +81,30 @@
             android:id="@+id/ImageButton08"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="bC1"
+            android:onClick="bCLight"
             android:src="@drawable/lightbulb" />
 
         <ImageButton
             android:id="@+id/ImageButton05"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="bCHeat"
             android:src="@drawable/heating" />
 
         <ImageButton
             android:id="@+id/ImageButton04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="bCElectronic"
             android:src="@drawable/atomic" />
 
         <ImageButton
             android:id="@+id/ImageButton06"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="bCMotd"
             android:src="@drawable/motd" />
+
     </LinearLayout>
 
 </RelativeLayout>
