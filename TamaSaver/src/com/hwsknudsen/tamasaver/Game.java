@@ -44,13 +44,13 @@ public class Game {
 		String three = mythree.getString(mythree.getColumnIndex("Field1"));
 		final float threedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
 
-		
-//		if (twodata>onedata && twodata>threedata){
-//			winnershouldbe = 2;
-//		}else 
-//			if (threedata>onedata && threedata>twodata){
-//			winnershouldbe = 3;
-//		}
+
+		//		if (twodata>onedata && twodata>threedata){
+		//			winnershouldbe = 2;
+		//		}else 
+		//			if (threedata>onedata && threedata>twodata){
+		//			winnershouldbe = 3;
+		//		}
 		//Log.e("12", mythree.getString(mythree.getColumnIndex("Field1")));
 
 		//		
@@ -70,10 +70,11 @@ public class Game {
 					Toast.makeText(Game.context, "You Win! Keep Playing :)", Toast.LENGTH_LONG).show();
 					Main.changemoodby((int) (100*Math.random()));
 					Game.myGame(Game.context);
+				}else{
+
+					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Start Game Again", Toast.LENGTH_LONG).show();
+					Main.changemoodby((int) (-50*Math.random()));
 				}
-				
-				Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Start Game Again", Toast.LENGTH_LONG).show();
-				Main.changemoodby((int) (-50*Math.random()));
 				dialog.cancel();
 			}
 		});
@@ -86,11 +87,11 @@ public class Game {
 
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int item) {
-				 switch (item) {
-	                case 0: currentchoice = onedata;
-	                case 1: currentchoice = twodata;
-	                case 2: currentchoice = threedata;
-	            }
+				switch (item) {
+				case 0: currentchoice = onedata;
+				case 1: currentchoice = twodata;
+				case 2: currentchoice = threedata;
+				}
 			}
 		});
 		AlertDialog alert = builder.create();

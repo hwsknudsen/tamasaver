@@ -11,20 +11,28 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int arrow=0x7f020000;
-        public static final int bluetamabackground=0x7f020001;
-        public static final int drawing=0x7f020002;
-        public static final int happy=0x7f020003;
-        public static final int happys=0x7f020004;
-        public static final int ic_action_search=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int lightblub=0x7f020007;
-        public static final int path3890=0x7f020008;
-        public static final int path3891=0x7f020009;
-        public static final int sads=0x7f02000a;
-        public static final int wink1=0x7f02000b;
-        public static final int wink2=0x7f02000c;
-        public static final int wink3=0x7f02000d;
+        public static final int appliance=0x7f020000;
+        public static final int arrow=0x7f020001;
+        public static final int atomic=0x7f020002;
+        public static final int bluetamabackground=0x7f020003;
+        public static final int dice=0x7f020004;
+        public static final int drawing=0x7f020005;
+        public static final int happy=0x7f020006;
+        public static final int happys=0x7f020007;
+        public static final int heating=0x7f020008;
+        public static final int ic_action_search=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int lightblub=0x7f02000b;
+        public static final int lightbulb=0x7f02000c;
+        public static final int motd=0x7f02000d;
+        public static final int path3890=0x7f02000e;
+        public static final int path3891=0x7f02000f;
+        public static final int raindrop=0x7f020010;
+        public static final int sads=0x7f020011;
+        public static final int walking=0x7f020012;
+        public static final int wink1=0x7f020013;
+        public static final int wink2=0x7f020014;
+        public static final int wink3=0x7f020015;
     }
     public static final class id {
         public static final int Button01=0x7f080006;

@@ -25,25 +25,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="bC2"
-            android:src="@drawable/sads" />
+            android:src="@drawable/appliance" />
 
         <ImageButton
             android:id="@+id/ImageButton01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/raindrop" />
 
         <ImageButton
             android:id="@+id/ImageButton07"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/walking" />
 
         <ImageButton
             android:id="@+id/ImageButton03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/dice" />
     </LinearLayout>
 
     <Button
@@ -75,27 +75,27 @@
         <ImageButton
             android:id="@+id/ImageButton08"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"        
+            android:layout_height="wrap_content"
             android:onClick="bC1"
-            android:src="@drawable/happys" />
+            android:src="@drawable/lightbulb" />
 
         <ImageButton
             android:id="@+id/ImageButton05"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/heating" />
 
         <ImageButton
             android:id="@+id/ImageButton04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/atomic" />
 
         <ImageButton
             android:id="@+id/ImageButton06"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_search" />
+            android:src="@drawable/motd" />
     </LinearLayout>
 
 </RelativeLayout>
