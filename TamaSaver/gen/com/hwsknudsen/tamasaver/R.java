@@ -52,6 +52,7 @@ public final class R {
         public static final int imageView1=0x7f080000;
         public static final int imageView2=0x7f080010;
         public static final int imageView3=0x7f08000f;
+        public static final int menu_awards=0x7f080014;
         public static final int menu_settings=0x7f080013;
         public static final int pager=0x7f08000d;
         public static final int textView1=0x7f08000e;
@@ -78,6 +79,7 @@ public final class R {
         public static final int complete=0x7f050009;
         public static final int gamebutton=0x7f05000d;
         public static final int hello_world=0x7f050004;
+        public static final int menu_awards=0x7f05000e;
         public static final int menu_settings=0x7f050005;
         public static final int placeofwork=0x7f05000c;
         public static final int prefsfilename=0x7f05000a;

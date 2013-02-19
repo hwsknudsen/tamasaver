@@ -72,16 +72,27 @@ public class Game {
 					Game.myGame(Game.context);
 				}else{
 
-					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Start Game Again", Toast.LENGTH_LONG).show();
+					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_LONG).show();
 					Main.changemoodby((int) (-50*Math.random()));
 				}
 				dialog.cancel();
 			}
 		});
+		
+		builder.setNeutralButton("Exit Game",
+	            new DialogInterface.OnClickListener() {
+	                public void onClick(DialogInterface dialog, int id) {
+
+						Toast.makeText(Game.context, "Try Again Soon", Toast.LENGTH_LONG).show();
+	                    dialog.cancel();
+
+	                }
+	            });
 
 		builder.setNegativeButton("Skip",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
 				dialog.cancel();
+				Main.changemoodby((int) (-10*Math.random()));
 				Game.myGame(Game.context);
 			}
 		});
@@ -119,6 +130,9 @@ public class Game {
 		.setCancelable(false) 
 		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
+				
+				//Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_LONG).show();
+				Main.changemoodby((int) (+10*Math.random()));
 				dialog.cancel();
 			}
 		})

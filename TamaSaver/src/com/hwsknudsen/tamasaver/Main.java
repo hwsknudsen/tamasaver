@@ -170,6 +170,10 @@ public class Main extends Activity{
 			Intent intent = new Intent(Main.this,Settings.class);
 			startActivity(intent);	
 			return true;
+		case R.id.menu_awards:
+			Intent intentaward = new Intent(Main.this,Settings.class);
+			startActivity(intentaward);	
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -225,27 +229,28 @@ public class Main extends Activity{
 	public void bCGame(View v){
 		Game.myGame(data.context);
 	}
-//	public void bC1(View v){
-//		changemoodby(50);
-//		animations.jump();
-//		animations.Wink();
-//		if (currentmood>=600){
-//			animations.do360();
-//		}
-//		//animations.GoTO(new PointF(200,200));
-//		update();
-//	}
-//
-//	public void bC2(View v){
-//		changemoodby(-50);
-//		animations.Wink();
-//		if (currentmood<=500){
-//			animations.Wink();
-//			//animations.jump();
-//		}
-//		//animations.GoTO(new PointF(200,200));
-//		update();
-//	}
+	
+	public void bC1(View v){
+		changemoodby(50);
+		animations.jump();
+		animations.Wink();
+		if (currentmood>=600){
+			animations.do360();
+		}
+		//animations.GoTO(new PointF(200,200));
+		update();
+	}
+
+	public void bC2(View v){
+		changemoodby(-50);
+		animations.Wink();
+		if (currentmood<=500){
+			animations.Wink();
+			//animations.jump();
+		}
+		//animations.GoTO(new PointF(200,200));
+		update();
+	}
 
 
 	private void update() {
