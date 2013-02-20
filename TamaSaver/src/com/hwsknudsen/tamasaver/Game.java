@@ -1,5 +1,7 @@
 package com.hwsknudsen.tamasaver;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -67,14 +69,23 @@ public class Game {
 			public void onClick(DialogInterface dialog,int id) {
 				if (currentchoice >= onedata && currentchoice >= twodata && currentchoice >= threedata){
 					//Main.gameWin(Main.this);
-					Toast.makeText(Game.context, "You Win! Keep Playing :)", Toast.LENGTH_LONG).show();
+					
+			        EasyTracker.getTracker().sendEvent("game", "action", "win", null);
+
+					
+					Toast.makeText(Game.context, "You Win! Keep Playing :)", Toast.LENGTH_SHORT).show();
 					Main.changemoodby((int) (100*Math.random()));
-					Game.myGame(Game.context);
+					//Game.myGame(Game.context);
 				}else{
 
-					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_LONG).show();
+			        EasyTracker.getTracker().sendEvent("game", "action", "lose", null);
+
+					
+					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_SHORT).show();
 					Main.changemoodby((int) (-50*Math.random()));
 				}
+				Game.myGame(Game.context);
+
 				dialog.cancel();
 			}
 		});
@@ -83,7 +94,10 @@ public class Game {
 	            new DialogInterface.OnClickListener() {
 	                public void onClick(DialogInterface dialog, int id) {
 
-						Toast.makeText(Game.context, "Try Again Soon", Toast.LENGTH_LONG).show();
+				        EasyTracker.getTracker().sendEvent("game", "action", "exit", null);
+
+	                	
+						Toast.makeText(Game.context, "Thanks for playing please Try Again Soon", Toast.LENGTH_LONG).show();
 	                    dialog.cancel();
 
 	                }
@@ -91,6 +105,10 @@ public class Game {
 
 		builder.setNegativeButton("Skip",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
+				
+		        EasyTracker.getTracker().sendEvent("game", "action", "skip", null);
+
+				
 				dialog.cancel();
 				Main.changemoodby((int) (-10*Math.random()));
 				Game.myGame(Game.context);

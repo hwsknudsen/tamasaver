@@ -14,6 +14,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Tracker;
+
 
 
 import android.os.Bundle;
@@ -56,6 +60,17 @@ public class Main extends Activity{
 	//public static SharedPreferences userconfig;
 	public static String dbname;
 
+	 @Override
+	  public void onStart() {
+	    super.onStart();
+	    EasyTracker.getInstance().activityStart(this); // Add this method.
+	  }
+
+	  @Override
+	  public void onStop() {
+	    super.onStop();
+	    EasyTracker.getInstance().activityStop(this); // Add this method.
+	  }
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -171,7 +186,7 @@ public class Main extends Activity{
 			startActivity(intent);	
 			return true;
 		case R.id.menu_awards:
-			Intent intentaward = new Intent(Main.this,Settings.class);
+			Intent intentaward = new Intent(Main.this,Awards.class);
 			startActivity(intentaward);	
 			return true;
 		default:
@@ -200,34 +215,58 @@ public class Main extends Activity{
 	
 	public void bCLight(View v){
 		Game.motdrandom(data.context);
+
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
+
 	}
 	
 	public void bCHeat(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
+
 	}
 
 	public void bCElectronic(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
+
 	}
 	
 	public void bCMotd(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "motd", null);
+
 	}
 	
 	public void bCAppliance(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
+
 	}
 	
 	public void bCWater(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "water", null);
+
 	}
 	
 	public void bCWalking(View v){
 		Game.motdrandom(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "walking", null);
+
 	}
 
 	public void bCGame(View v){
 		Game.myGame(data.context);
+		
+        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "game", null);
+
 	}
 	
 	public void bC1(View v){

@@ -1,5 +1,7 @@
 package com.hwsknudsen.tamasaver;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -35,7 +37,18 @@ public class Settings extends Activity implements ActionBar.TabListener  {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-    
+
+    @Override
+    public void onStart() {
+      super.onStart();
+      EasyTracker.getInstance().activityStart(this); // Add this method.
+    }
+
+    @Override
+    public void onStop() {
+      super.onStop();
+      EasyTracker.getInstance().activityStop(this); // Add this method.
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

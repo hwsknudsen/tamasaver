@@ -9,6 +9,25 @@ package com.hwsknudsen.tamasaver;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarButtonStyle=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010000;
+    }
+    public static final class bool {
+        /** Enable automatic activity tracking
+         */
+        public static final int ga_autoActivityTracking=0x7f060000;
+        /** Enable automatic exception tracking
+         */
+        public static final int ga_reportUncaughtExceptions=0x7f060001;
+    }
+    public static final class color {
+        public static final int black_overlay=0x7f070000;
     }
     public static final class drawable {
         public static final int appliance=0x7f020000;
@@ -35,63 +54,119 @@ public final class R {
         public static final int wink3=0x7f020015;
     }
     public static final class id {
-        public static final int Button01=0x7f080006;
-        public static final int ImageButton01=0x7f080003;
-        public static final int ImageButton02=0x7f080002;
-        public static final int ImageButton03=0x7f080005;
-        public static final int ImageButton04=0x7f08000b;
-        public static final int ImageButton05=0x7f08000a;
-        public static final int ImageButton06=0x7f08000c;
-        public static final int ImageButton07=0x7f080004;
-        public static final int ImageButton08=0x7f080009;
-        public static final int LinearLayout01=0x7f080001;
-        public static final int LinearLayout02=0x7f080008;
-        public static final int button1=0x7f080007;
-        public static final int checkBox1=0x7f080011;
-        public static final int checkBox2=0x7f080012;
-        public static final int imageView1=0x7f080000;
-        public static final int imageView2=0x7f080010;
-        public static final int imageView3=0x7f08000f;
-        public static final int menu_awards=0x7f080014;
-        public static final int menu_settings=0x7f080013;
-        public static final int pager=0x7f08000d;
-        public static final int textView1=0x7f08000e;
+        public static final int Button01=0x7f0a0009;
+        public static final int ImageButton01=0x7f0a0006;
+        public static final int ImageButton02=0x7f0a0005;
+        public static final int ImageButton03=0x7f0a0008;
+        public static final int ImageButton04=0x7f0a000e;
+        public static final int ImageButton05=0x7f0a000d;
+        public static final int ImageButton06=0x7f0a000f;
+        public static final int ImageButton07=0x7f0a0007;
+        public static final int ImageButton08=0x7f0a000c;
+        public static final int ImageView03=0x7f0a0002;
+        public static final int ImageView04=0x7f0a0003;
+        public static final int ImageView05=0x7f0a0001;
+        public static final int LinearLayout01=0x7f0a0004;
+        public static final int LinearLayout02=0x7f0a000b;
+        public static final int button1=0x7f0a000a;
+        public static final int checkBox1=0x7f0a0014;
+        public static final int checkBox2=0x7f0a0015;
+        public static final int imageView1=0x7f0a0000;
+        public static final int imageView2=0x7f0a0013;
+        public static final int imageView3=0x7f0a0012;
+        public static final int menu_awards=0x7f0a0017;
+        public static final int menu_settings=0x7f0a0016;
+        public static final int pager=0x7f0a0010;
+        public static final int textView1=0x7f0a0011;
     }
     public static final class layout {
-        public static final int activity_home=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int fragmentwelcome=0x7f030002;
-        public static final int gameoverlay=0x7f030003;
-        public static final int prefrence=0x7f030004;
-        public static final int setupchoices=0x7f030005;
-        public static final int setupcomplete=0x7f030006;
-        public static final int tamalayout=0x7f030007;
+        public static final int activity_awards=0x7f030000;
+        public static final int activity_home=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int fragmentwelcome=0x7f030003;
+        public static final int gameoverlay=0x7f030004;
+        public static final int prefrence=0x7f030005;
+        public static final int setupchoices=0x7f030006;
+        public static final int setupcomplete=0x7f030007;
+        public static final int tamalayout=0x7f030008;
     }
     public static final class menu {
-        public static final int activity_home=0x7f070000;
-        public static final int activity_main=0x7f070001;
+        public static final int activity_home=0x7f090000;
+        public static final int activity_main=0x7f090001;
     }
     public static final class raw {
         public static final int thecarbondata=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int complete=0x7f050009;
-        public static final int gamebutton=0x7f05000d;
-        public static final int hello_world=0x7f050004;
-        public static final int menu_awards=0x7f05000e;
-        public static final int menu_settings=0x7f050005;
-        public static final int placeofwork=0x7f05000c;
-        public static final int prefsfilename=0x7f05000a;
-        public static final int renter=0x7f05000b;
-        public static final int title_activity_home=0x7f050008;
-        public static final int title_activity_main=0x7f050006;
-        public static final int title_section1=0x7f050003;
-        public static final int title_section2=0x7f050002;
-        public static final int title_section3=0x7f050001;
-        public static final int welcome_text=0x7f050007;
+        public static final int app_name=0x7f050001;
+        public static final int complete=0x7f05000a;
+        public static final int dummy_button=0x7f050011;
+        public static final int dummy_content=0x7f050010;
+        /** Replace placeholder ID with your tracking ID
+         */
+        public static final int ga_trackingId=0x7f050000;
+        public static final int gamebutton=0x7f05000e;
+        public static final int hello_world=0x7f050005;
+        public static final int menu_awards=0x7f05000f;
+        public static final int menu_settings=0x7f050006;
+        public static final int placeofwork=0x7f05000d;
+        public static final int prefsfilename=0x7f05000b;
+        public static final int renter=0x7f05000c;
+        public static final int title_activity_awards=0x7f050012;
+        public static final int title_activity_home=0x7f050009;
+        public static final int title_activity_main=0x7f050007;
+        public static final int title_section1=0x7f050004;
+        public static final int title_section2=0x7f050003;
+        public static final int title_section3=0x7f050002;
+        public static final int welcome_text=0x7f050008;
     }
     public static final class style {
-        public static final int AppTheme=0x7f060000;
+        public static final int AppTheme=0x7f080000;
+        public static final int ButtonBar=0x7f080002;
+        public static final int ButtonBarButton=0x7f080001;
+        public static final int FullscreenActionBarStyle=0x7f080004;
+        public static final int FullscreenTheme=0x7f080003;
     }
+    public static final class styleable {
+        /** 
+         Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels.
+    
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarButtonStyle com.hwsknudsen.tamasaver:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarStyle com.hwsknudsen.tamasaver:buttonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_buttonBarButtonStyle
+           @see #ButtonBarContainerTheme_buttonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.hwsknudsen.tamasaver.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:buttonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.hwsknudsen.tamasaver.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:buttonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
+    };
 }

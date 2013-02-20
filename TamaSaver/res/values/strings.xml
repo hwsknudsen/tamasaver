@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">TamaSaver</string>
@@ -10,9 +11,13 @@
     <string name="welcome_text">Welcome To TamaSaver an app to encourage you to save energy. In A Friendly Helpful Manner, In order to do this we will need to ask some questions about your environment. \n\nPlease Swipe To the right to Continue</string>
     <string name="title_activity_home">Tama Saver</string>
     <string name="complete">Complete</string>
-	<string name="prefsfilename">prefsfile</string>
-	<string name="renter">Do you Live in Rented Accomidation </string>
-	<string name="placeofwork">Do You work In an Institution?</string>
-	<string name="gamebutton">Game</string>
-	<string name="menu_awards">Awards</string>
+    <string name="prefsfilename">prefsfile</string>
+    <string name="renter">Do you Live in Rented Accomidation </string>
+    <string name="placeofwork">Do You work In an Institution?</string>
+    <string name="gamebutton">Game</string>
+    <string name="menu_awards">Awards</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_awards">Awards</string>
+
 </resources>
