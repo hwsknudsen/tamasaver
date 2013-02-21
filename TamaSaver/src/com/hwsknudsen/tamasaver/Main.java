@@ -216,6 +216,8 @@ public class Main extends Activity{
 	public void bCLight(View v){
 		Game.motdrandom(data.context);
 
+		
+		
         EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
 
 	}

@@ -26,6 +26,8 @@ public class Game {
 
 	public static void myGame(Context context) {
 
+		//EasyTracker.getInstance().setContext(Game.context);
+
 		//context.myDB
 		//SQLiteDatabase myDB = openOrCreateDatabase(Main.dbname, Main.MODE_PRIVATE, null);
 

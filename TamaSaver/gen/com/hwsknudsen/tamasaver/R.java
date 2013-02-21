@@ -19,15 +19,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int buttonBarStyle=0x7f010000;
     }
     public static final class bool {
-        /** Enable automatic activity tracking
+        /**  Enable automatic activity tracking 
          */
         public static final int ga_autoActivityTracking=0x7f060000;
-        /** Enable automatic exception tracking
+        /**  <bool name="ga_debug">true</bool> 
+ Enable automatic exception tracking 
          */
         public static final int ga_reportUncaughtExceptions=0x7f060001;
     }
     public static final class color {
-        public static final int black_overlay=0x7f070000;
+        public static final int black_overlay=0x7f080000;
     }
     public static final class drawable {
         public static final int appliance=0x7f020000;
@@ -54,30 +55,36 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int wink3=0x7f020015;
     }
     public static final class id {
-        public static final int Button01=0x7f0a0009;
-        public static final int ImageButton01=0x7f0a0006;
-        public static final int ImageButton02=0x7f0a0005;
-        public static final int ImageButton03=0x7f0a0008;
-        public static final int ImageButton04=0x7f0a000e;
-        public static final int ImageButton05=0x7f0a000d;
-        public static final int ImageButton06=0x7f0a000f;
-        public static final int ImageButton07=0x7f0a0007;
-        public static final int ImageButton08=0x7f0a000c;
-        public static final int ImageView03=0x7f0a0002;
-        public static final int ImageView04=0x7f0a0003;
-        public static final int ImageView05=0x7f0a0001;
-        public static final int LinearLayout01=0x7f0a0004;
-        public static final int LinearLayout02=0x7f0a000b;
-        public static final int button1=0x7f0a000a;
-        public static final int checkBox1=0x7f0a0014;
-        public static final int checkBox2=0x7f0a0015;
-        public static final int imageView1=0x7f0a0000;
-        public static final int imageView2=0x7f0a0013;
-        public static final int imageView3=0x7f0a0012;
-        public static final int menu_awards=0x7f0a0017;
-        public static final int menu_settings=0x7f0a0016;
-        public static final int pager=0x7f0a0010;
-        public static final int textView1=0x7f0a0011;
+        public static final int Button01=0x7f0b0009;
+        public static final int ImageButton01=0x7f0b0006;
+        public static final int ImageButton02=0x7f0b0005;
+        public static final int ImageButton03=0x7f0b0008;
+        public static final int ImageButton04=0x7f0b000e;
+        public static final int ImageButton05=0x7f0b000d;
+        public static final int ImageButton06=0x7f0b000f;
+        public static final int ImageButton07=0x7f0b0007;
+        public static final int ImageButton08=0x7f0b000c;
+        public static final int ImageView03=0x7f0b0002;
+        public static final int ImageView04=0x7f0b0003;
+        public static final int ImageView05=0x7f0b0001;
+        public static final int LinearLayout01=0x7f0b0004;
+        public static final int LinearLayout02=0x7f0b000b;
+        public static final int button1=0x7f0b000a;
+        public static final int checkBox1=0x7f0b0014;
+        public static final int checkBox2=0x7f0b0015;
+        public static final int imageView1=0x7f0b0000;
+        public static final int imageView2=0x7f0b0013;
+        public static final int imageView3=0x7f0b0012;
+        public static final int menu_awards=0x7f0b0017;
+        public static final int menu_settings=0x7f0b0016;
+        public static final int pager=0x7f0b0010;
+        public static final int textView1=0x7f0b0011;
+    }
+    public static final class integer {
+        /**  dispatch in seconds 
+ <integer name="ga_dispatchPeriod">120</integer> 
+         */
+        public static final int ga_dispatchPeriod=0x7f070000;
     }
     public static final class layout {
         public static final int activity_awards=0x7f030000;
@@ -91,8 +98,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tamalayout=0x7f030008;
     }
     public static final class menu {
-        public static final int activity_home=0x7f090000;
-        public static final int activity_main=0x7f090001;
+        public static final int activity_home=0x7f0a0000;
+        public static final int activity_main=0x7f0a0001;
     }
     public static final class raw {
         public static final int thecarbondata=0x7f040000;
@@ -102,7 +109,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int complete=0x7f05000a;
         public static final int dummy_button=0x7f050011;
         public static final int dummy_content=0x7f050010;
-        /** Replace placeholder ID with your tracking ID
+        /**  Replace placeholder ID with your tracking ID 
          */
         public static final int ga_trackingId=0x7f050000;
         public static final int gamebutton=0x7f05000e;
@@ -121,11 +128,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int welcome_text=0x7f050008;
     }
     public static final class style {
-        public static final int AppTheme=0x7f080000;
-        public static final int ButtonBar=0x7f080002;
-        public static final int ButtonBarButton=0x7f080001;
-        public static final int FullscreenActionBarStyle=0x7f080004;
-        public static final int FullscreenTheme=0x7f080003;
+        public static final int AppTheme=0x7f090000;
+        public static final int ButtonBar=0x7f090002;
+        public static final int ButtonBarButton=0x7f090001;
+        public static final int FullscreenActionBarStyle=0x7f090004;
+        public static final int FullscreenTheme=0x7f090003;
     }
     public static final class styleable {
         /** 
