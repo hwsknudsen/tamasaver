@@ -48,11 +48,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int path3890=0x7f02000e;
         public static final int path3891=0x7f02000f;
         public static final int raindrop=0x7f020010;
-        public static final int sads=0x7f020011;
-        public static final int walking=0x7f020012;
-        public static final int wink1=0x7f020013;
-        public static final int wink2=0x7f020014;
-        public static final int wink3=0x7f020015;
+        public static final int rip=0x7f020011;
+        public static final int sads=0x7f020012;
+        public static final int walk1=0x7f020013;
+        public static final int walk2=0x7f020014;
+        public static final int walking=0x7f020015;
+        public static final int wink1=0x7f020016;
+        public static final int wink2=0x7f020017;
+        public static final int wink3=0x7f020018;
     }
     public static final class id {
         public static final int Button01=0x7f0b0009;

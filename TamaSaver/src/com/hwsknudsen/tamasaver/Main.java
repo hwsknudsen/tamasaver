@@ -54,23 +54,23 @@ public class Main extends Activity{
 	public static int currentFace;
 	public static int currentmood;
 
-	
+
 	public static SharedPreferences settings2;
 	//public static String dbname;
 	//public static SharedPreferences userconfig;
 	public static String dbname;
 
-	 @Override
-	  public void onStart() {
-	    super.onStart();
-	    EasyTracker.getInstance().activityStart(this); // Add this method.
-	  }
+	@Override
+	public void onStart() {
+		super.onStart();
+		EasyTracker.getInstance().activityStart(this); // Add this method.
+	}
 
-	  @Override
-	  public void onStop() {
-	    super.onStop();
-	    EasyTracker.getInstance().activityStop(this); // Add this method.
-	  }
+	@Override
+	public void onStop() {
+		super.onStop();
+		EasyTracker.getInstance().activityStop(this); // Add this method.
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -97,7 +97,7 @@ public class Main extends Activity{
 		String ActionLIST = "ActionLIST";
 		myDB = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 
-		
+
 		if(data.firstrun ){
 			// & setup DB 
 
@@ -107,21 +107,21 @@ public class Main extends Activity{
 					+ " (Field1 TEXT, Field2 FLOAT(10));");
 
 			/* Insert data to a Table*/
-//			myDB.execSQL("INSERT INTO "
-//					+ ActionLIST
-//					+ " (Field1, Field2)"
-//					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
+			//			myDB.execSQL("INSERT INTO "
+			//					+ ActionLIST
+			//					+ " (Field1, Field2)"
+			//					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
 
 			InputStream is = getResources().openRawResource(R.raw.thecarbondata);
 			try {
-				
+
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder db = factory.newDocumentBuilder();
 				Document dom = db.parse(is); 
 				NodeList mynodes = dom.getElementsByTagName("Row");
 
 				ContentValues insertValues = new ContentValues();
-				
+
 				for (int i = 0; i < mynodes.getLength(); i++) { 
 					Node aNode = mynodes.item(i); 
 					Element element = (Element) aNode;
@@ -131,16 +131,16 @@ public class Main extends Activity{
 
 					insertValues.put("Field1",text);
 					insertValues.put("Field2",Float.parseFloat(value));
-					
-					
+
+
 					//Log.e("hi",value);
 
-					
+
 					myDB.insert(ActionLIST, null, insertValues);
-					
+
 
 				} 
-				
+
 				//myDB.close();
 
 				//ContentValues insertValues = populatedbfrom(is);
@@ -194,83 +194,87 @@ public class Main extends Activity{
 		}
 	}
 
-//	public void buttonClicked(View v) {
-//
-//		//		animations.GoTO(new PointF(100,100));
-//		//		update();
-//		//motdrandom();
-//		//startGame();
-//		Game.myGame(data.context);
-//	}
-//
-//
-//
-//	public void buttonClicked2(View v) {
-//		animations.do360();
-//		//animations.GoTO(new PointF(200,200));
-//		update();
-//
-//	}
+	//	public void buttonClicked(View v) {
+	//
+	//		//		animations.GoTO(new PointF(100,100));
+	//		//		update();
+	//		//motdrandom();
+	//		//startGame();
+	//		Game.myGame(data.context);
+	//	}
+	//
+	//
+	//
+	//	public void buttonClicked2(View v) {
+	//		animations.do360();
+	//		//animations.GoTO(new PointF(200,200));
+	//		update();
+	//
+	//	}
 
-	
+
 	public void bCLight(View v){
 		Game.motdrandom(data.context);
 
-		
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
+
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
 
 	}
-	
+
 	public void bCHeat(View v){
 		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
 
 	}
 
 	public void bCElectronic(View v){
 		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
 
 	}
-	
+
 	public void bCMotd(View v){
 		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "motd", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "motd", null);
 
 	}
-	
+
 	public void bCAppliance(View v){
 		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
 
 	}
-	
+
 	public void bCWater(View v){
 		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "water", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "water", null);
 
 	}
-	
+
 	public void bCWalking(View v){
-		Game.motdrandom(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "walking", null);
+		//Game.motdrandom(data.context);
+
+		animations.Walk();
+		//animations.GoTO(new PointF(200,200));
+		update();
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "walking", null);
 
 	}
 
 	public void bCGame(View v){
 		Game.myGame(data.context);
-		
-        EasyTracker.getTracker().sendEvent("ui_action", "button_press", "game", null);
+
+		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "game", null);
 
 	}
-	
+
 	public void bC1(View v){
 		changemoodby(50);
 		animations.jump();
@@ -325,8 +329,42 @@ public class Main extends Activity{
 				update();
 			}
 		}	
+
+
+		changebasefaceduetomood();
+
+
 	}
-	
+
+	private void changebasefaceduetomood() {
+		int moodrounder = currentmood/10;
+		if(currentmood<=0){
+			// issue award rip tama
+			animations.changeFacePermenant(R.drawable.rip);
+		}else if(moodrounder>0){
+			
+		}else if(moodrounder>1){
+
+		}else if(moodrounder>2){
+
+		}else if(moodrounder>3){
+
+		}else if(moodrounder>5){
+
+		}else if(moodrounder>6){
+
+		}else if(moodrounder>7){
+
+		}else if(moodrounder>8){
+
+		}else if(moodrounder>9){
+
+		}else if(moodrounder>10){
+			// issue award golden tama
+
+		}
+	}
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		//Log.e("hi","hi");

@@ -86,6 +86,37 @@ public class animations {
 		Main.goingto.add(new Actions(face,true));
 	}
 
+	public static void Walk() {
+		int timeing = 400;
+		Main.goingto.add(new Actions(R.drawable.walk1,false));
+		GoTO(new PointF(getLastLocation().x+50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk2,false));
+		GoTO(new PointF(getLastLocation().x+50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk1,false));
+		GoTO(new PointF(getLastLocation().x+50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk2,false));
+		GoTO(new PointF(getLastLocation().x, getLastLocation().y-50));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk1,false));
+		GoTO(new PointF(getLastLocation().x-50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk2,false));
+		GoTO(new PointF(getLastLocation().x-50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk1,false));
+		GoTO(new PointF(getLastLocation().x-50, getLastLocation().y));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.walk2,false));
+		GoTO(new PointF(getLastLocation().x, getLastLocation().y+50));
+		Wait(timeing);
+		Main.goingto.add(new Actions(Main.currentFace,true));
+	}
+
+	
+	
 	public static void Wait(long time) {
 		AnimationSet as = new AnimationSet(true);
 		PointF last = getLastLocation();

@@ -128,6 +128,7 @@ public class Game {
 		});
 		AlertDialog alert = builder.create();
 		alert.show();
+		
 	}
 
 	public static void motdrandom(Context context) {
