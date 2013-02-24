@@ -4,6 +4,7 @@ package com.hwsknudsen.tamasaver;
 import com.google.analytics.tracking.android.EasyTracker;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 public class Awards extends Activity {
@@ -27,6 +28,10 @@ public class Awards extends Activity {
 		setContentView(R.layout.activity_awards);
 	}
 
+//	public static void scoreUpdateAward(int currentmood){
+//
+//
+//	}
 }
 
 

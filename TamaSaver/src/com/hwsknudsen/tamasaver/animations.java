@@ -82,6 +82,38 @@ public class animations {
 
 	}
 	
+	
+	public static void Heat() {
+		int timeing = 400;
+		Main.goingto.add(new Actions(R.drawable.heat,false));
+		GoTO(new PointF(getLastLocation().x-100, getLastLocation().y));
+		Wait(timeing);
+		GoTO(new PointF(getLastLocation().x, getLastLocation().y-75));
+		do360();
+		Wait(timeing);
+		do360();
+		Wait(timeing);
+		GoTO(new PointF(getLastLocation().x+100, getLastLocation().y+75));
+		Wait(timeing);
+		Main.goingto.add(new Actions(Main.currentFace,true));
+	}
+	
+	public static void Water() {
+		int timeing = 400;
+		Main.goingto.add(new Actions(R.drawable.water1,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.water2,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.water3,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.water4,false));
+		Wait(timeing+200);
+		do360();
+		Wait(timeing+200);
+		Main.goingto.add(new Actions(Main.currentFace,true));
+
+	}
+	
 	public static void changeFacePermenant(int face) {
 		Main.goingto.add(new Actions(face,true));
 	}

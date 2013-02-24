@@ -3,6 +3,8 @@ package com.hwsknudsen.tamasaver;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,12 +23,21 @@ import com.google.analytics.tracking.android.Tracker;
 
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PointF;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,9 +54,11 @@ public class Main extends Activity{
 	public static final String PREFS_NAME = "main_prefs";
 	public static final String CONFIG_Prefs = "config_prefs";
 
+	public static final String Awards_pref = "award_prefs";
+
 	Game data = new Game(this);
 	private String ActionLIST;
-	private SharedPreferences settings;
+	public SharedPreferences settings;
 	static SQLiteDatabase myDB;
 
 	public static ImageView iv;
@@ -76,10 +89,8 @@ public class Main extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-
-
 		settings = getSharedPreferences(PREFS_NAME, 0);
-		settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+		//settings2 = getSharedPreferences(CONFIG_Prefs, 0);
 
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
@@ -99,18 +110,12 @@ public class Main extends Activity{
 
 
 		if(data.firstrun ){
-			// & setup DB 
 
 			/* Create a Table in the Database. */
 			myDB.execSQL("CREATE TABLE IF NOT EXISTS "
 					+ ActionLIST 
 					+ " (Field1 TEXT, Field2 FLOAT(10));");
 
-			/* Insert data to a Table*/
-			//			myDB.execSQL("INSERT INTO "
-			//					+ ActionLIST
-			//					+ " (Field1, Field2)"
-			//					+ " VALUES ('GET AN ENERGY MONITOR', 2.512);");
 
 			InputStream is = getResources().openRawResource(R.raw.thecarbondata);
 			try {
@@ -133,7 +138,6 @@ public class Main extends Activity{
 					insertValues.put("Field2",Float.parseFloat(value));
 
 
-					//Log.e("hi",value);
 
 
 					myDB.insert(ActionLIST, null, insertValues);
@@ -156,6 +160,11 @@ public class Main extends Activity{
 				e.printStackTrace();
 			}
 
+
+			Intent intent = new Intent(Main.this,Settings.class);
+			startActivity(intent);	
+
+
 		}else{
 			Game.motdrandom(data.context);
 
@@ -166,7 +175,33 @@ public class Main extends Activity{
 		iv.setImageResource(currentFace);
 
 
-	}
+		Calendar dateCal = Calendar.getInstance();
+		// make it now
+		//dateCal.setTime(new Date());
+		// make it tomorrow
+		dateCal.add(Calendar.DAY_OF_YEAR, 1);
+		// Now set it to the time you want
+		dateCal.set(Calendar.HOUR_OF_DAY, 10);
+		dateCal.set(Calendar.MINUTE, 0);
+		dateCal.set(Calendar.SECOND, 0);
+		dateCal.set(Calendar.MILLISECOND, 0);
+
+		
+		String alarm = Context.ALARM_SERVICE;
+		AlarmManager am = ( AlarmManager ) getSystemService( alarm );
+		 
+		Intent intent = new Intent( "REFRESH_THIS" );
+		PendingIntent pi = PendingIntent.getBroadcast( this, 0, intent, 0 );
+		 
+		int type = AlarmManager.RTC_WAKEUP;
+
+		am.set(type, dateCal.getTimeInMillis(), pi);
+		
+
+	}		
+
+
+
 
 
 
@@ -214,24 +249,29 @@ public class Main extends Activity{
 
 
 	public void bCLight(View v){
-		Game.motdrandom(data.context);
-
-
+		animations.do360();
+		//animations.GoTO(new PointF(200,200));
+		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
 
 	}
 
 	public void bCHeat(View v){
-		Game.motdrandom(data.context);
+		animations.Heat();
+		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
 
 	}
 
 	public void bCElectronic(View v){
-		Game.motdrandom(data.context);
+//
+//		Calendar cal = Calendar.getInstance();
+//		cal.add(Calendar.SECOND, 5);
 
+
+	
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
 
 	}
@@ -244,14 +284,31 @@ public class Main extends Activity{
 	}
 
 	public void bCAppliance(View v){
-		Game.motdrandom(data.context);
+
+		Intent intent = new Intent(this, Main.class);
+		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
+		@SuppressWarnings("deprecation")
+		Notification noti = new Notification.Builder(this)
+		.setContentTitle("New mail from ")
+		.setContentText("HI")
+		.setSmallIcon(R.drawable.happy)
+		.setContentIntent(pIntent)
+		.getNotification();
+
+		NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		// Hide the notification after its selected
+		noti.flags |= Notification.FLAG_AUTO_CANCEL;
+
+		notificationManager.notify(0, noti);
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
 
 	}
 
 	public void bCWater(View v){
-		Game.motdrandom(data.context);
+
+		animations.Water();
+		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "water", null);
 
@@ -342,7 +399,7 @@ public class Main extends Activity{
 			// issue award rip tama
 			animations.changeFacePermenant(R.drawable.rip);
 		}else if(moodrounder>0){
-			
+
 		}else if(moodrounder>1){
 
 		}else if(moodrounder>2){
@@ -378,13 +435,15 @@ public class Main extends Activity{
 
 
 
-
-
 	public static void changemoodby(int d) {
 		// TODO Auto-generated method stub
 		currentmood = currentmood + d;
-		//save back to settings two 
+		//Awards mai = Awards.getInstance();
+
+		//Awards.scoreUpdateAward(currentmood);
+
 		Log.e("moodupdate", String.valueOf(currentmood));
+
 	}
 
 

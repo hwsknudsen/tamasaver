@@ -65,7 +65,7 @@ public class Game {
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				context);
-		builder.setTitle("Wich Saves The most Energy");
+		builder.setTitle("Wich Saves The most Energy?");
 
 		builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {

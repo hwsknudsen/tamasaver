@@ -51,24 +51,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="buttonClicked2"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/Button01"
-        android:onClick="buttonClicked"
-        android:text="Button" />
-
     <LinearLayout
         android:id="@+id/LinearLayout02"
         android:layout_width="wrap_content"
