@@ -16,8 +16,8 @@
 
     <CheckBoxPreference
         android:defaultValue="true"
-        android:key="Extra"
-        android:summary="Extra"
-        android:title="Extra" />
+        android:key="reminder"
+        android:summary="Can tamasaver remind you to save energy daily?"
+        android:title="Daily Reminder" />
 
 </PreferenceScreen>

@@ -174,29 +174,29 @@ public class Main extends Activity{
 		currentFace = R.drawable.path3890;
 		iv.setImageResource(currentFace);
 
+		if (settings2.getBoolean("reminder", true)){
+			Calendar dateCal = Calendar.getInstance();
+			// make it now
+			//dateCal.setTime(new Date());
+			// make it tomorrow
+			dateCal.add(Calendar.DAY_OF_YEAR, 1);
+			// Now set it to the time you want
+			dateCal.set(Calendar.HOUR_OF_DAY, 10);
+			dateCal.set(Calendar.MINUTE, 0);
+			dateCal.set(Calendar.SECOND, 0);
+			dateCal.set(Calendar.MILLISECOND, 0);
 
-		Calendar dateCal = Calendar.getInstance();
-		// make it now
-		//dateCal.setTime(new Date());
-		// make it tomorrow
-		dateCal.add(Calendar.DAY_OF_YEAR, 1);
-		// Now set it to the time you want
-		dateCal.set(Calendar.HOUR_OF_DAY, 10);
-		dateCal.set(Calendar.MINUTE, 0);
-		dateCal.set(Calendar.SECOND, 0);
-		dateCal.set(Calendar.MILLISECOND, 0);
 
-		
-		String alarm = Context.ALARM_SERVICE;
-		AlarmManager am = ( AlarmManager ) getSystemService( alarm );
-		 
-		Intent intent = new Intent( "REFRESH_THIS" );
-		PendingIntent pi = PendingIntent.getBroadcast( this, 0, intent, 0 );
-		 
-		int type = AlarmManager.RTC_WAKEUP;
+			String alarm = Context.ALARM_SERVICE;
+			AlarmManager am = ( AlarmManager ) getSystemService( alarm );
 
-		am.set(type, dateCal.getTimeInMillis(), pi);
-		
+			Intent intent = new Intent( "REFRESH_THIS" );
+			PendingIntent pi = PendingIntent.getBroadcast( this, 0, intent, 0 );
+
+			int type = AlarmManager.RTC_WAKEUP;
+
+			am.set(type, dateCal.getTimeInMillis(), pi);
+		}
 
 	}		
 
@@ -266,12 +266,12 @@ public class Main extends Activity{
 	}
 
 	public void bCElectronic(View v){
-//
-//		Calendar cal = Calendar.getInstance();
-//		cal.add(Calendar.SECOND, 5);
+		//
+		//		Calendar cal = Calendar.getInstance();
+		//		cal.add(Calendar.SECOND, 5);
 
 
-	
+
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
 
 	}

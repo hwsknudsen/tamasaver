@@ -78,7 +78,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ImageView05=0x7f0b0001;
         public static final int LinearLayout01=0x7f0b0004;
         public static final int LinearLayout02=0x7f0b0009;
-        public static final int LinearLayout1=0x7f0b0014;
+        public static final int TableLayout1=0x7f0b0014;
         public static final int button1=0x7f0b0015;
         public static final int checkBox1=0x7f0b0012;
         public static final int checkBox2=0x7f0b0013;
