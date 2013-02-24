@@ -1,5 +1,6 @@
 package com.hwsknudsen.tamasaver;
 
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -26,12 +27,14 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -86,11 +89,27 @@ public class Main extends Activity{
 	}
 
 	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+	  super.onSaveInstanceState(savedInstanceState);
+
+	  
+
+		// We need an Editor object to make preference changes.
+		// All objects are from android.context.Context
+		SharedPreferences settings = getSharedPreferences(Main.PREFS_NAME, 0);
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putInt("mood", currentmood);
+
+		// Commit the edits!
+		editor.commit();
+	}
+	
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		settings = getSharedPreferences(PREFS_NAME, 0);
-		//settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+		settings2 = getSharedPreferences(CONFIG_Prefs, 0);
 
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
@@ -174,7 +193,8 @@ public class Main extends Activity{
 		currentFace = R.drawable.path3890;
 		iv.setImageResource(currentFace);
 
-		if (settings2.getBoolean("reminder", true)){
+		boolean remind = settings2.getBoolean("reminder", true);
+		if (remind){
 			Calendar dateCal = Calendar.getInstance();
 			// make it now
 			//dateCal.setTime(new Date());
@@ -220,10 +240,10 @@ public class Main extends Activity{
 			Intent intent = new Intent(Main.this,Settings.class);
 			startActivity(intent);	
 			return true;
-		case R.id.menu_awards:
-			Intent intentaward = new Intent(Main.this,Awards.class);
-			startActivity(intentaward);	
-			return true;
+//		case R.id.menu_awards:
+//			Intent intentaward = new Intent(Main.this,Awards.class);
+//			startActivity(intentaward);	
+//			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -249,8 +269,10 @@ public class Main extends Activity{
 
 
 	public void bCLight(View v){
-		animations.do360();
+		animations.Light();
 		//animations.GoTO(new PointF(200,200));
+		changemoodby(50,data.context);
+
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
@@ -259,6 +281,8 @@ public class Main extends Activity{
 
 	public void bCHeat(View v){
 		animations.Heat();
+		changemoodby(50,data.context);
+
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
@@ -270,37 +294,26 @@ public class Main extends Activity{
 		//		Calendar cal = Calendar.getInstance();
 		//		cal.add(Calendar.SECOND, 5);
 
+		animations.Electornic();
 
-
+		changemoodby(50,data.context);
+		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
 
 	}
 
 	public void bCMotd(View v){
 		Game.motdrandom(data.context);
-
+		changemoodby(50,data.context);
+		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "motd", null);
 
 	}
 
 	public void bCAppliance(View v){
-
-		Intent intent = new Intent(this, Main.class);
-		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
-		@SuppressWarnings("deprecation")
-		Notification noti = new Notification.Builder(this)
-		.setContentTitle("New mail from ")
-		.setContentText("HI")
-		.setSmallIcon(R.drawable.happy)
-		.setContentIntent(pIntent)
-		.getNotification();
-
-		NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-		// Hide the notification after its selected
-		noti.flags |= Notification.FLAG_AUTO_CANCEL;
-
-		notificationManager.notify(0, noti);
-
+		animations.Appliance();
+		changemoodby(50,data.context);
+		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
 
 	}
@@ -308,6 +321,8 @@ public class Main extends Activity{
 	public void bCWater(View v){
 
 		animations.Water();
+		changemoodby(50,data.context);
+
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "water", null);
@@ -319,6 +334,8 @@ public class Main extends Activity{
 
 		animations.Walk();
 		//animations.GoTO(new PointF(200,200));
+		changemoodby(50,data.context);
+
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "walking", null);
@@ -333,7 +350,7 @@ public class Main extends Activity{
 	}
 
 	public void bC1(View v){
-		changemoodby(50);
+		changemoodby(50,data.context);
 		animations.jump();
 		animations.Wink();
 		if (currentmood>=600){
@@ -344,7 +361,7 @@ public class Main extends Activity{
 	}
 
 	public void bC2(View v){
-		changemoodby(-50);
+		changemoodby(-50,data.context);
 		animations.Wink();
 		if (currentmood<=500){
 			animations.Wink();
@@ -355,7 +372,7 @@ public class Main extends Activity{
 	}
 
 
-	private void update() {
+	private static void update() {
 
 		if(!goingto.isEmpty()){
 			Actions thisanimation = goingto.get(0);
@@ -388,63 +405,98 @@ public class Main extends Activity{
 		}	
 
 
-		changebasefaceduetomood();
 
 
 	}
 
-	private void changebasefaceduetomood() {
-		int moodrounder = currentmood/10;
-		if(currentmood<=0){
+	private static void changebasefaceduetomood() {
+		//int moodrounder = currentmood/10;
+
+		Log.e("moodupdate", String.valueOf(currentmood));
+
+
+		if(currentmood>1000){
+			animations.changeFacePermenant(R.drawable.gold);
+		}else if(currentmood>800){
+			animations.changeFacePermenant(R.drawable.ecowarrior);
+		}else if(currentmood>700){
+			animations.changeFacePermenant(R.drawable.ecostar);
+		}else if(currentmood>450){
+			animations.changeFacePermenant(R.drawable.path3890);
+		}else if(currentmood>300){
+			animations.changeFacePermenant(R.drawable.sad);
+		}else if(currentmood>200){
+			animations.changeFacePermenant(R.drawable.sick);
+		}else if(currentmood<=0){
 			// issue award rip tama
 			animations.changeFacePermenant(R.drawable.rip);
-		}else if(moodrounder>0){
-
-		}else if(moodrounder>1){
-
-		}else if(moodrounder>2){
-
-		}else if(moodrounder>3){
-
-		}else if(moodrounder>5){
-
-		}else if(moodrounder>6){
-
-		}else if(moodrounder>7){
-
-		}else if(moodrounder>8){
-
-		}else if(moodrounder>9){
-
-		}else if(moodrounder>10){
 			// issue award golden tama
-
 		}
+		update();
 	}
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		//Log.e("hi","hi");
+
 		animations.GoTO(new PointF(event.getX()-(iv.getWidth()/2),event.getY()-(iv.getHeight()/2)));
-		Main.goingto.add(new Actions(R.drawable.path3890,true));
+		//Main.goingto.add(new Actions(R.drawable.path3890,true));
 
 		//iv.setImageResource(R.drawable.path3890);
 		update();
+
 		return true;
 	}
 
 
 
-	public static void changemoodby(int d) {
-		// TODO Auto-generated method stub
-		currentmood = currentmood + d;
-		//Awards mai = Awards.getInstance();
+	public static void changemoodby(int d, Context context) {
 
-		//Awards.scoreUpdateAward(currentmood);
+
+		if (currentmood<1000 && currentmood>0){
+			currentmood = currentmood + d;
+			changebasefaceduetomood();
+		} else if(currentmood>=1000){
+			new AlertDialog.Builder(context)
+		    .setTitle("Gretness !")
+		    .setMessage("You have achieved energy saving enlightenment? Would you like to start again?")
+		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		        	currentmood=500;
+					changebasefaceduetomood();
+
+		        	}
+		     })
+		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // do nothing
+		        }
+		     })
+		     .show();
+		} else if(currentmood<=0){
+			new AlertDialog.Builder(context)
+		    .setTitle("Sad News !")
+		    .setMessage("You need more time to achieve greatness in energy saving? Would you like to start again?")
+		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		        	currentmood=500;
+					changebasefaceduetomood();
+		        }
+		     })
+		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // do nothing
+		        }
+		     })
+		     .show();
+		}
+		//Awards mai = Awards.getInstance();
 
 		Log.e("moodupdate", String.valueOf(currentmood));
 
 	}
+
+
 
 
 

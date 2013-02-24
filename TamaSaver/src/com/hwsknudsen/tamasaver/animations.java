@@ -98,6 +98,57 @@ public class animations {
 		Main.goingto.add(new Actions(Main.currentFace,true));
 	}
 	
+	public static void Light() {
+		int timeing = 400;
+		Main.goingto.add(new Actions(R.drawable.light0,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.lightoff,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.light1,false));
+		Wait(timeing+200);
+		Main.goingto.add(new Actions(R.drawable.light0,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.lightoff,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.light1,false));
+		Wait(timeing+200);
+		Main.goingto.add(new Actions(R.drawable.light0,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.lightoff,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.light1,false));
+		Wait(timeing+200);
+		Main.goingto.add(new Actions(R.drawable.light0,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.lightoff,false));
+		Wait(timeing);
+		Main.goingto.add(new Actions(R.drawable.light1,false));
+		Wait(timeing+200);
+		Main.goingto.add(new Actions(Main.currentFace,true));
+
+	}
+	
+	public static void Appliance() {
+		int timeing = 5000;
+		Main.goingto.add(new Actions(R.drawable.tvoff,false));
+		Wait(timeing);		
+		Main.goingto.add(new Actions(R.drawable.tvoff,false));
+		Wait(timeing);	
+		Main.goingto.add(new Actions(Main.currentFace,true));
+
+	}
+
+	public static void Electornic() {
+		int timeing = 5000;
+		Main.goingto.add(new Actions(R.drawable.matrix,false));
+		Wait(timeing);		
+		Main.goingto.add(new Actions(R.drawable.matrix,false));
+		Wait(timeing);	
+		Main.goingto.add(new Actions(Main.currentFace,true));
+
+	}
+
+	
 	public static void Water() {
 		int timeing = 400;
 		Main.goingto.add(new Actions(R.drawable.water1,false));
@@ -179,6 +230,7 @@ public class animations {
 		return last;
 	}
 
+	
 
 
 

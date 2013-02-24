@@ -24,7 +24,7 @@ public class myTimeAlarm extends BroadcastReceiver  {
 
 	private void showNotification(Context context) {
 		
-		Main.changemoodby(-100); // lower mood daily 
+		Main.changemoodby(-100,context); // lower mood daily 
 		
 	    PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
 	            new Intent(context, Main.class), 0);

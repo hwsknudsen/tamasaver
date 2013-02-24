@@ -24,7 +24,7 @@ public class Game {
 		this.context = context;
 	}
 
-	public static void myGame(Context context) {
+	public static void myGame(final Context context) {
 
 		//EasyTracker.getInstance().setContext(Game.context);
 
@@ -76,7 +76,7 @@ public class Game {
 
 					
 					Toast.makeText(Game.context, "You Win! Keep Playing :)", Toast.LENGTH_SHORT).show();
-					Main.changemoodby((int) (100*Math.random()));
+					Main.changemoodby((int) (100*Math.random()),context);
 					//Game.myGame(Game.context);
 				}else{
 
@@ -84,7 +84,7 @@ public class Game {
 
 					
 					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_SHORT).show();
-					Main.changemoodby((int) (-50*Math.random()));
+					Main.changemoodby((int) (-50*Math.random()),context);
 				}
 				Game.myGame(Game.context);
 
@@ -112,7 +112,7 @@ public class Game {
 
 				
 				dialog.cancel();
-				Main.changemoodby((int) (-10*Math.random()));
+				Main.changemoodby((int) (-10*Math.random()),context);
 				Game.myGame(Game.context);
 			}
 		});
@@ -131,7 +131,7 @@ public class Game {
 		
 	}
 
-	public static void motdrandom(Context context) {
+	public static void motdrandom(final Context context) {
 
 
 		Cursor mythree = Main.myDB.rawQuery("SELECT * FROM ActionLIST ORDER BY RANDOM() LIMIT 1", null);
@@ -153,7 +153,7 @@ public class Game {
 			public void onClick(DialogInterface dialog,int id) {
 				
 				//Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_LONG).show();
-				Main.changemoodby((int) (+10*Math.random()));
+				Main.changemoodby((int) (+10*Math.random()),context);
 				dialog.cancel();
 			}
 		})
