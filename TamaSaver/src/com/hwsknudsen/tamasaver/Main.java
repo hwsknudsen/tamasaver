@@ -415,7 +415,7 @@ public class Main extends Activity{
 		Log.e("moodupdate", String.valueOf(currentmood));
 
 
-		if(currentmood>1000){
+		if(currentmood>=1000){
 			animations.changeFacePermenant(R.drawable.gold);
 		}else if(currentmood>800){
 			animations.changeFacePermenant(R.drawable.ecowarrior);
