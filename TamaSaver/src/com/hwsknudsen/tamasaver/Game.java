@@ -2,22 +2,16 @@ package com.hwsknudsen.tamasaver;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
-
 import com.google.analytics.tracking.android.EasyTracker;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.SharedPreferences;
-import android.content.res.Resources.Theme;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -103,9 +97,11 @@ public class Game {
 
 					Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_SHORT).show();
 					Main.changemoodby((int) (-50*Math.random()),context);
-					
-					SharedPreferences settings2 = Game.context.getSharedPreferences(Main.CONFIG_Prefs, 0);
+					SharedPreferences settings2 = PreferenceManager.getDefaultSharedPreferences(Game.context);
+
+					//SharedPreferences settings2 = Game.context.getSharedPreferences(Main.CONFIG_Prefs, 0);
 					boolean hinteasygame = settings2.getBoolean("easygame", true);
+					Log.e("123", String.valueOf(settings2.contains("easygame")));
 					if(hinteasygame==true){
 						Game.hintDialog(Game.context,one,onedata,two,twodata,three,threedata);
 					}else{

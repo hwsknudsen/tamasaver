@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<MyTable>
+<Table>
 	<Row>
-		<Text>Swtch off lights in roms that aren1t bing used (6-11 pm duringwek and 8 am to 11pm on weekends)</Text>
+		<Text>Swtch off lights in roms that aren't bing used (6-11 pm duringwek and 8 am to
+11pm on weekends).</Text>
 		<carbonusage>0.359</carbonusage>
 	</Row>
 	<Row>
-		<Text>svtch off lights in offices that aren't bing used. (7pm-7am during the week and 24hours at the</Text>
+		<Text>svtch off lights in offices that aren't bing used. (7pm-7am during the week and
+24hours at the</Text>
 		<carbonusage>19.747</carbonusage>
 	</Row>
 	<Row>
@@ -13,11 +15,13 @@
 		<carbonusage>4.388</carbonusage>
 	</Row>
 	<Row>
-		<Text>Use a single lamp to illuminate only the area you are using. rather than lighting up whole room or</Text>
+		<Text>Use a single lamp to illuminate only the area you are using. rather than lighting up
+whole room or</Text>
 		<carbonusage>4.19</carbonusage>
 	</Row>
 	<Row>
-		<Text>Maximise the use of natural daylight.   Relocate wr surfaces, desks and reading areas nearer to</Text>
+		<Text>Maximise the use of natural daylight.   Relocate wr surfaces, desks and reading
+areas nearer to</Text>
 		<carbonusage>4.388</carbonusage>
 	</Row>
 	<Row>
@@ -29,7 +33,8 @@
 		<carbonusage>0.101</carbonusage>
 	</Row>
 	<Row>
-		<Text>Install occupancy sensorswich tum lights on or off depending on whether there is someone in the room</Text>
+		<Text>Install occupancy sensorswich tum lights on or off depending on whether there is
+someone in the room</Text>
 		<carbonusage>2.56</carbonusage>
 	</Row>
 	<Row>
@@ -45,7 +50,8 @@
 		<carbonusage>0.007</carbonusage>
 	</Row>
 	<Row>
-		<Text>Swtch your cmputer/monitor off every night AND every time you are away for a period of time</Text>
+		<Text>Swtch your cmputer/monitor off every night AND every time you are away for a
+period of time</Text>
 		<carbonusage>8.034</carbonusage>
 	</Row>
 	<Row>
@@ -53,7 +59,8 @@
 		<carbonusage>44.536</carbonusage>
 	</Row>
 	<Row>
-		<Text>Use a 'power-dow' plug: this device turs off all peripheral devices when you tum off your main computer unit, and starts them up again</Text>
+		<Text>Use a 'power-dow' plug: this device turs off all peripheral devices when you tum
+off your main computer unit, and starts them up again</Text>
 		<carbonusage>0.914</carbonusage>
 	</Row>
 	<Row>
@@ -65,7 +72,8 @@
 		<carbonusage>4.144</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reduce the brightness on your TV.  If you have a LCD TV, you can usually tum dowthe</Text>
+		<Text>Reduce the brightness on your TV.  If you have a LCD TV, you can usually tum
+dowthe</Text>
 		<carbonusage>1.038</carbonusage>
 	</Row>
 	<Row>
@@ -153,7 +161,8 @@
 		<carbonusage>0.865</carbonusage>
 	</Row>
 	<Row>
-		<Text>Where appropriate, re-use any cups, glasses or dishes rather than taking a dean one time.</Text>
+		<Text>Where appropriate, re-use any cups, glasses or dishes rather than taking a dean
+one time.</Text>
 		<carbonusage>0.571</carbonusage>
 	</Row>
 	<Row>
@@ -169,7 +178,8 @@
 		<carbonusage>1.943</carbonusage>
 	</Row>
 	<Row>
-		<Text>If you live in shared accmmodation. consider filling the washing machine up with several dotes rather than half loads.</Text>
+		<Text>If you live in shared accmmodation. consider filling the washing machine up with
+several dotes rather than half loads.</Text>
 		<carbonusage>1.943</carbonusage>
 	</Row>
 	<Row>
@@ -189,7 +199,7 @@
 		<carbonusage>0.095</carbonusage>
 	</Row>
 	<Row>
-		<Text>Put lids on pans when boiling water.</Text>
+		<Text>Put lids on pans when boiling water</Text>
 		<carbonusage>0.499</carbonusage>
 	</Row>
 	<Row>
@@ -209,7 +219,7 @@
 		<carbonusage>0.061</carbonusage>
 	</Row>
 	<Row>
-		<Text>Chop vegeMyTables/meats into smaller sizes when coking</Text>
+		<Text>Chop vegetables/meats into smaller sizes when coking</Text>
 		<carbonusage>0.759</carbonusage>
 	</Row>
 	<Row>
@@ -233,7 +243,7 @@
 		<carbonusage>0.707</carbonusage>
 	</Row>
 	<Row>
-		<Text>Put on warmer dothes instead of turning up the heatng.</Text>
+		<Text>Put on warmer dothes instead of turning up the heatng</Text>
 		<carbonusage>7.539</carbonusage>
 	</Row>
 	<Row>
@@ -241,7 +251,7 @@
 		<carbonusage>26.901</carbonusage>
 	</Row>
 	<Row>
-		<Text>If your heating is set above the cmforMyTable room tempeture or 18-21oC. tur it</Text>
+		<Text>If your heating is set above the cmfortable room tempeture or 18-21oC. tur it</Text>
 		<carbonusage>7.539</carbonusage>
 	</Row>
 	<Row>
@@ -253,7 +263,8 @@
 		<carbonusage>9.423</carbonusage>
 	</Row>
 	<Row>
-		<Text>Experiment with altering heating and cooling thermostats.  As a guide, t setting no higher than 19°C for heating and no lower than 24°C for cooling.</Text>
+		<Text>Experiment with altering heating and cooling thermostats.  As a guide, t setting no
+higher than 19°C for heating and no lower than 24°C for cooling.</Text>
 		<carbonusage>7.539</carbonusage>
 	</Row>
 	<Row>
@@ -289,11 +300,12 @@
 		<carbonusage>4.694</carbonusage>
 	</Row>
 	<Row>
-		<Text>If you are using air conditioning keep the window and doors closed.</Text>
+		<Text>If you are using air conditioning. keep the window and doors closed.</Text>
 		<carbonusage>6.258</carbonusage>
 	</Row>
 	<Row>
-		<Text>Set the air conditioning thermostat at the highest temperature with wich you are comforMyTable.</Text>
+		<Text>Set the air conditioning thermostat at the highest temperature with wich you are
+comfortable.</Text>
 		<carbonusage>1.502</carbonusage>
 	</Row>
 	<Row>
@@ -301,7 +313,8 @@
 		<carbonusage>2.5</carbonusage>
 	</Row>
 	<Row>
-		<Text>Find out if you have the recmmended 270mm depth of loft insulation. If not, cnsider it.</Text>
+		<Text>Find out if you have the recmmended 270mm depth of loft insulation. If not,
+cnsider it.</Text>
 		<carbonusage>15.385</carbonusage>
 	</Row>
 	<Row>
@@ -325,7 +338,8 @@
 		<carbonusage>0.66</carbonusage>
 	</Row>
 	<Row>
-		<Text>If you don't have a bike, cnsider buying one under the cycle to work scheme.  Or second hand one.</Text>
+		<Text>If you don't have a bike, cnsider buying one under the cycle to work scheme.  Or
+second hand one.</Text>
 		<carbonusage>4.917</carbonusage>
 	</Row>
 	<Row>
@@ -333,11 +347,13 @@
 		<carbonusage>10.422</carbonusage>
 	</Row>
 	<Row>
-		<Text>Contact your locl MSPs and councillors and campaign for improved transport and infrastructure</Text>
+		<Text>Contact your locl MSPs and councillors and campaign for improved transport and
+infrastructure</Text>
 		<carbonusage>0</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reduce the amount of business flights you take, try to travel by public transport or lift share to a</Text>
+		<Text>Reduce the amount of business flights you take, try to travel by public transport or lift
+share to a</Text>
 		<carbonusage>12.519</carbonusage>
 	</Row>
 	<Row>
@@ -373,7 +389,9 @@
 		<carbonusage>4.917</carbonusage>
 	</Row>
 	<Row>
-		<Text>If you are buying a car, think about the energy and carbon used to produce it, as well as it's fuel when are it.</Text>
+		<Text>If you are buying a car, think about the energy and carbon used to produce it, as well
+as it's fuel when are it.
+</Text>
 		<carbonusage>6.19</carbonusage>
 	</Row>
 	<Row>
@@ -397,7 +415,8 @@
 		<carbonusage>12.03</carbonusage>
 	</Row>
 	<Row>
-		<Text>Tur off the engine when you are not driving (e.g., if you are waiting for someone or stuck in</Text>
+		<Text>Tur off the engine when you are not driving (e.g., if you are waiting for someone or
+stuck in</Text>
 		<carbonusage>0.24</carbonusage>
 	</Row>
 	<Row>
@@ -405,7 +424,8 @@
 		<carbonusage>2.453</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reduce your cr trips to te supermarket· do one big weekly shop, or combine your with another car</Text>
+		<Text>Reduce your cr trips to te supermarket· do one big weekly shop, or combine your
+with another car</Text>
 		<carbonusage>1.226</carbonusage>
 	</Row>
 	<Row>
@@ -425,7 +445,8 @@
 		<carbonusage>3.627</carbonusage>
 	</Row>
 	<Row>
-		<Text>Ask your organisation to provide advanced driver training andl or eco-driving training to all those who drive vehicles.</Text>
+		<Text>Ask your organisation to provide advanced driver training andl or eco-driving training
+to all those who drive vehicles.</Text>
 		<carbonusage>24.944</carbonusage>
 	</Row>
 	<Row>
@@ -433,7 +454,8 @@
 		<carbonusage>9.511</carbonusage>
 	</Row>
 	<Row>
-		<Text>Accelerate slowty and smoothly, maintain a steady speed (within the speed limit!) and and starts.</Text>
+		<Text>Accelerate slowty and smoothly, maintain a steady speed (within the speed limit!)
+and and starts.</Text>
 		<carbonusage>9.511</carbonusage>
 	</Row>
 	<Row>
@@ -449,15 +471,17 @@
 		<carbonusage>1.902</carbonusage>
 	</Row>
 	<Row>
-		<Text>Remove roof racks I boxes and cycle racks from your car.  Clear out any heavy clutter have in car.</Text>
+		<Text>Remove roof racks I boxes and cycle racks from your car.  Clear out any heavy
+clutter have in car.</Text>
 		<carbonusage>3.804</carbonusage>
 	</Row>
 	<Row>
-		<Text>Plan your joureys to avoid congestion. Use SatNav or similar IT applications to avoid traffic congestion and reduce the amount of wasted jourey time.</Text>
+		<Text>Plan your joureys to avoid congestion. Use SatNav or similar IT applications to
+avoid traffic congestion and reduce the amount of wasted jourey time.</Text>
 		<carbonusage>10.145</carbonusage>
 	</Row>
 	<Row>
-		<Text>Convert to Lpg fuel</Text>
+		<Text>Convert to lpg fuel</Text>
 		<carbonusage>8.04</carbonusage>
 	</Row>
 	<Row>
@@ -505,7 +529,7 @@
 		<carbonusage>0.885</carbonusage>
 	</Row>
 	<Row>
-		<Text>Buy fresh: avoid pre-prepared fruit and vegeMyTables</Text>
+		<Text>Buy fresh: avoid pre-prepared fruit and vegetables</Text>
 		<carbonusage>0.148</carbonusage>
 	</Row>
 	<Row>
@@ -525,11 +549,12 @@
 		<carbonusage>0.016</carbonusage>
 	</Row>
 	<Row>
-		<Text>If hiring catering for events or meetings, cnsider asking for low carbon catering. E.g. seasonal fruit and vegeMyTables that are in season and grown locally.</Text>
+		<Text>If hiring catering for events or meetings, cnsider asking for low carbon catering.
+E.g. seasonal fruit and vegetables that are in season and grown locally.</Text>
 		<carbonusage>0.465</carbonusage>
 	</Row>
 	<Row>
-		<Text>Become self sufficient in fruit and vegeMyTables</Text>
+		<Text>Become self sufficient in fruit and vegetables</Text>
 		<carbonusage>2.308</carbonusage>
 	</Row>
 	<Row>
@@ -545,7 +570,7 @@
 		<carbonusage>3.186</carbonusage>
 	</Row>
 	<Row>
-		<Text>Set up a water butt and use the water in it to water your houseplants and garden.</Text>
+		<Text>Set up a water butt and use the water in it to water the garden and houseplants.</Text>
 		<carbonusage>0.003</carbonusage>
 	</Row>
 	<Row>
@@ -569,11 +594,13 @@
 		<carbonusage>0.03</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reduce water use when washing pots by washing the cleaner things first (glasses. then to the</Text>
+		<Text>Reduce water use when washing pots by washing the cleaner things first (glasses.
+then to the</Text>
 		<carbonusage>0.121</carbonusage>
 	</Row>
 	<Row>
-		<Text>Recycle your waste  Label your waste and recycling bins so everyone knows what should in tem</Text>
+		<Text>Recycle your waste  Label your waste and recycling bins so everyone knows what
+should in tem</Text>
 		<carbonusage>1.56</carbonusage>
 	</Row>
 	<Row>
@@ -600,4 +627,4 @@
 		<Text>Reuse or recycle your ink cartridges</Text>
 		<carbonusage>0.24</carbonusage>
 	</Row>
-</MyTable>
+</Table>

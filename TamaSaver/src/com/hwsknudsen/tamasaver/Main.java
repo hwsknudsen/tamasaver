@@ -1,46 +1,33 @@
 package com.hwsknudsen.tamasaver;
 
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+//import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.GoogleAnalytics;
-import com.google.analytics.tracking.android.Tracker;
-
-
-
 import android.os.Bundle;
-import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PointF;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,19 +35,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class Main extends Activity{
 
-	public static final String PREFS_NAME = "main_prefs";
-	public static final String CONFIG_Prefs = "config_prefs";
+	//public static final String PREFS_NAME = "main_prefs";
+	//public static final String CONFIG_Prefs = "config_prefs";
 
-	public static final String Awards_pref = "award_prefs";
+	//public static final String Awards_pref = "award_prefs";
 
 	Game data = new Game(this);
-	private String ActionLIST;
+	//private String ActionLIST;
 	public SharedPreferences settings;
 	static SQLiteDatabase myDB;
 
@@ -71,7 +56,7 @@ public class Main extends Activity{
 	public static int currentmood;
 
 
-	public static SharedPreferences settings2;
+	//public static SharedPreferences settings2;
 	//public static String dbname;
 	//public static SharedPreferences userconfig;
 	public static String dbname;
@@ -96,7 +81,7 @@ public class Main extends Activity{
 
 		// We need an Editor object to make preference changes.
 		// All objects are from android.context.Context
-		SharedPreferences settings = getSharedPreferences(Main.PREFS_NAME, 0);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		SharedPreferences.Editor editor = settings.edit();
 		editor.putInt("mood", currentmood);
 
@@ -108,8 +93,8 @@ public class Main extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		settings = getSharedPreferences(PREFS_NAME, 0);
-		settings2 = getSharedPreferences(CONFIG_Prefs, 0);
+		settings = PreferenceManager.getDefaultSharedPreferences(this);
+		//settings2 = getSharedPreferences(CONFIG_Prefs, 0);
 
 		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
@@ -148,7 +133,7 @@ public class Main extends Activity{
 
 				for (int i = 0; i < mynodes.getLength(); i++) { 
 					Node aNode = mynodes.item(i); 
-					Element element = (Element) aNode;
+					//Element element = (Element) aNode;
 
 					String text = aNode.getChildNodes().item(1).getTextContent();
 					String value = aNode.getChildNodes().item(3).getTextContent();
@@ -193,7 +178,7 @@ public class Main extends Activity{
 		currentFace = R.drawable.path3890;
 		iv.setImageResource(currentFace);
 
-		boolean remind = settings2.getBoolean("reminder", true);
+		boolean remind = settings.getBoolean("reminder", true);
 		if (remind){
 			Calendar dateCal = Calendar.getInstance();
 			// make it now

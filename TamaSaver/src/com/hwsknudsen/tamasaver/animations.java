@@ -1,10 +1,8 @@
 package com.hwsknudsen.tamasaver;
 
 import android.graphics.PointF;
-import android.graphics.drawable.Drawable;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 

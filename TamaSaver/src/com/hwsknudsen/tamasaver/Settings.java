@@ -6,24 +6,19 @@ import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.app.Fragment;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 public class Settings extends Activity implements ActionBar.TabListener  {
@@ -123,7 +118,7 @@ public class Settings extends Activity implements ActionBar.TabListener  {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private String Settings;
+		//private String Settings;
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -254,7 +249,7 @@ public class Settings extends Activity implements ActionBar.TabListener  {
 
 		// We need an Editor object to make preference changes.
 		// All objects are from android.context.Context
-		SharedPreferences settings = getSharedPreferences(Main.PREFS_NAME, 0);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		SharedPreferences.Editor editor = settings.edit();
 		editor.putBoolean("firstRun", false);
 

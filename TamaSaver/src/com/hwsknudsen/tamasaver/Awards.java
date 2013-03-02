@@ -4,7 +4,6 @@ package com.hwsknudsen.tamasaver;
 import com.google.analytics.tracking.android.EasyTracker;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 public class Awards extends Activity {
