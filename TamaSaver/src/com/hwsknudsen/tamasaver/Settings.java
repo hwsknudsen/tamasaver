@@ -6,6 +6,8 @@ import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.app.Fragment;
@@ -214,6 +216,8 @@ public class Settings extends Activity implements ActionBar.TabListener  {
 			// Load the preferences from an XML resource
 			addPreferencesFromResource(R.layout.prefrence);
 		}
+		
+
 	}
 
 

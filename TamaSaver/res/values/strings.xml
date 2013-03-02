@@ -15,6 +15,7 @@
     <string name="prefsfilename">prefsfile</string>
     <string name="renter">Do you Live in Rented Accomidation </string>
     <string name="placeofwork">Do You work In an Institution?</string>
+    <string name="gamehints">Do want hints to help you improve if you dont win at the game?</string>
     <string name="gamebutton">Game</string>
     <string name="menu_awards">Awards</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
