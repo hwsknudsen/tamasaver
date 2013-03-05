@@ -28,15 +28,7 @@ public class Game {
 
 	public static void myGame(final Context context) {
 
-		//EasyTracker.getInstance().setContext(Game.context);
-
-		//context.myDB
-		//SQLiteDatabase myDB = openOrCreateDatabase(Main.dbname, Main.MODE_PRIVATE, null);
-
 		Cursor mythree = Main.myDB.rawQuery("SELECT * FROM ActionLIST ORDER BY RANDOM() LIMIT 3", null);
-		//mythree.moveToNext();
-		//getColumnIndex
-
 
 		mythree.moveToFirst();
 
@@ -51,16 +43,6 @@ public class Game {
 		final String three = mythree.getString(mythree.getColumnIndex("Field1"));
 		final float threedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
 
-
-		//		if (twodata>onedata && twodata>threedata){
-		//			winnershouldbe = 2;
-		//		}else 
-		//			if (threedata>onedata && threedata>twodata){
-		//			winnershouldbe = 3;
-		//		}
-		//Log.e("12", mythree.getString(mythree.getColumnIndex("Field1")));
-
-		//		
 		final CharSequence[] items = {one, two, three};
 
 
@@ -188,11 +170,6 @@ public class Game {
 
 		builder.setItems(items, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int item) {
-//				switch (item) {
-//				case 0: currentchoice = numbers.get(0).value;
-//				case 1: currentchoice = numbers.get(1).value;
-//				case 2: currentchoice = numbers.get(2).value;
-//				}
 				Game.myGame(Game.context);
 
 			}
@@ -224,7 +201,6 @@ public class Game {
 		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
 
-				//Toast.makeText(Game.context, "You Lose You're Making Me :(! Please Try Again", Toast.LENGTH_LONG).show();
 				Main.changemoodby((int) (+10*Math.random()),context);
 				dialog.cancel();
 			}

@@ -140,19 +140,9 @@ public class Settings extends Activity implements ActionBar.TabListener  {
 			}
 			else if(i==2){
 				fragment = new Complete();
-				//	            fragment = new DummySectionFragment();
-				//	            Bundle args = new Bundle();
-				//	            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i+1);
-				//	            //Log.e("op", Integer.toString(i));
-				//	            fragment.setArguments(args);
 			}
 			else if(i==3){
 				fragment = new Complete2();
-				//	            fragment = new DummySectionFragment();
-				//	            Bundle args = new Bundle();
-				//	            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i+1);
-				//	            //Log.e("op", Integer.toString(i));
-				//	            fragment.setArguments(args);
 			}
 
 			return fragment;
@@ -250,7 +240,6 @@ public class Settings extends Activity implements ActionBar.TabListener  {
 		//Log.e("op", "blahs");
 		Intent intent = new Intent(Settings.this,Main.class);
 		startActivity(intent);
-
 
 		// We need an Editor object to make preference changes.
 		// All objects are from android.context.Context

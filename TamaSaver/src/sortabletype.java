@@ -9,7 +9,6 @@ public class sortabletype implements Comparable<sortabletype>{
 	}
 	@Override
 	public int compareTo(sortabletype another) {
-		// TODO Auto-generated method stub
 		return (int) (value-another.value);
 	}
 

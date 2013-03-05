@@ -16,8 +16,6 @@ public class myTimeAlarm extends BroadcastReceiver  {
 	
 	@Override
 	public void onReceive(Context context, Intent arg1) {
-//		   Toast.makeText(context, "Don't panik but your time is up!!!!.",
-//			        Toast.LENGTH_LONG).show();
 		showNotification(context);
 	}
 
