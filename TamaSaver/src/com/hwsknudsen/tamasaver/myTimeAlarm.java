@@ -1,5 +1,7 @@
 package com.hwsknudsen.tamasaver;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -13,15 +15,14 @@ public class myTimeAlarm extends BroadcastReceiver  {
 	
 	@Override
 	public void onReceive(Context context, Intent arg1) {
-//		   Toast.makeText(context, "Don't panik but your time is up!!!!.",
-//			        Toast.LENGTH_LONG).show();
 		showNotification(context);
 	}
 
 	private void showNotification(Context context) {
 		
 		Main.changemoodby(-100,context); // lower mood daily 
-		
+		EasyTracker.getTracker().sendEvent("backgroundaction", "moodchange", "dailymoodlower", null);
+
 	    PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
 	            new Intent(context, Main.class), 0);
 

@@ -4,19 +4,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
-//import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
@@ -28,6 +25,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PointF;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,15 +36,12 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 public class Main extends Activity{
 
-	//public static final String PREFS_NAME = "main_prefs";
-	//public static final String CONFIG_Prefs = "config_prefs";
-
-	//public static final String Awards_pref = "award_prefs";
 
 	Game data = new Game(this);
-	//private String ActionLIST;
 	public SharedPreferences settings;
 	static SQLiteDatabase myDB;
 
@@ -55,10 +51,6 @@ public class Main extends Activity{
 	public static int currentFace;
 	public static int currentmood;
 
-
-	//public static SharedPreferences settings2;
-	//public static String dbname;
-	//public static SharedPreferences userconfig;
 	public static String dbname;
 
 	@Override
@@ -77,8 +69,6 @@ public class Main extends Activity{
 	public void onSaveInstanceState(Bundle savedInstanceState) {
 	  super.onSaveInstanceState(savedInstanceState);
 
-	  
-
 		// We need an Editor object to make preference changes.
 		// All objects are from android.context.Context
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -94,9 +84,6 @@ public class Main extends Activity{
 		super.onCreate(savedInstanceState);
 
 		settings = PreferenceManager.getDefaultSharedPreferences(this);
-		//settings2 = getSharedPreferences(CONFIG_Prefs, 0);
-
-		//userconfig = getSharedPreferences(Main.CONFIG_Prefs, 0);
 
 		setContentView(R.layout.activity_home);
 
@@ -104,7 +91,6 @@ public class Main extends Activity{
 		this.dbname = settings.getString("dbname", "mydb");
 
 		currentmood = settings.getInt("mood", 500);
-
 
 		// If first run load settings 
 
@@ -133,7 +119,6 @@ public class Main extends Activity{
 
 				for (int i = 0; i < mynodes.getLength(); i++) { 
 					Node aNode = mynodes.item(i); 
-					//Element element = (Element) aNode;
 
 					String text = aNode.getChildNodes().item(1).getTextContent();
 					String value = aNode.getChildNodes().item(3).getTextContent();
@@ -141,17 +126,12 @@ public class Main extends Activity{
 					insertValues.put("Field1",text);
 					insertValues.put("Field2",Float.parseFloat(value));
 
-
-
-
 					myDB.insert(ActionLIST, null, insertValues);
 
 
 				} 
 
-				//myDB.close();
 
-				//ContentValues insertValues = populatedbfrom(is);
 
 			} catch (ParserConfigurationException e) {
 				// TODO Auto-generated catch block
@@ -220,37 +200,14 @@ public class Main extends Activity{
 			Intent intent = new Intent(Main.this,Settings.class);
 			startActivity(intent);	
 			return true;
-//		case R.id.menu_awards:
-//			Intent intentaward = new Intent(Main.this,Awards.class);
-//			startActivity(intentaward);	
-//			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
-	//	public void buttonClicked(View v) {
-	//
-	//		//		animations.GoTO(new PointF(100,100));
-	//		//		update();
-	//		//motdrandom();
-	//		//startGame();
-	//		Game.myGame(data.context);
-	//	}
-	//
-	//
-	//
-	//	public void buttonClicked2(View v) {
-	//		animations.do360();
-	//		//animations.GoTO(new PointF(200,200));
-	//		update();
-	//
-	//	}
-
 
 	public void bCLight(View v){
 		animations.Light();
-		//animations.GoTO(new PointF(200,200));
 		changemoodby(50,data.context);
 
 		update();
@@ -310,10 +267,8 @@ public class Main extends Activity{
 	}
 
 	public void bCWalking(View v){
-		//Game.motdrandom(data.context);
 
 		animations.Walk();
-		//animations.GoTO(new PointF(200,200));
 		changemoodby(50,data.context);
 
 		update();
@@ -345,9 +300,7 @@ public class Main extends Activity{
 		animations.Wink();
 		if (currentmood<=500){
 			animations.Wink();
-			//animations.jump();
 		}
-		//animations.GoTO(new PointF(200,200));
 		update();
 	}
 
@@ -390,7 +343,6 @@ public class Main extends Activity{
 	}
 
 	private static void changebasefaceduetomood() {
-		//int moodrounder = currentmood/10;
 
 		Log.e("moodupdate", String.valueOf(currentmood));
 
@@ -420,9 +372,7 @@ public class Main extends Activity{
 		//Log.e("hi","hi");
 
 		animations.GoTO(new PointF(event.getX()-(iv.getWidth()/2),event.getY()-(iv.getHeight()/2)));
-		//Main.goingto.add(new Actions(R.drawable.path3890,true));
 
-		//iv.setImageResource(R.drawable.path3890);
 		update();
 
 		return true;
@@ -473,12 +423,19 @@ public class Main extends Activity{
 		//Awards mai = Awards.getInstance();
 
 		Log.e("moodupdate", String.valueOf(currentmood));
+		EasyTracker.getTracker().sendEvent("backgroundaction", "moodchange", "currentmood", (long) currentmood);
 
 	}
 
 
 
+	public static void exitgame() {
+		// TODO Auto-generated method stub		
 
+		animations.Wink();
+		animations.jump();
+		update();
+	}
 
 
 
