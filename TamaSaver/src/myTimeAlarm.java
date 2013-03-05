@@ -1,5 +1,6 @@
 
 
+import com.google.analytics.tracking.android.EasyTracker;
 import com.hwsknudsen.tamasaver.R;
 import com.hwsknudsen.tamasaver.R.drawable;
 
@@ -21,6 +22,7 @@ public class myTimeAlarm extends BroadcastReceiver  {
 
 	private void showNotification(Context context) {
 		
+		EasyTracker.getTracker().sendEvent("backgroundaction", "moodchange", "dailymoodlower", null);
 		Main.changemoodby(-100,context); // lower mood daily 
 		
 	    PendingIntent contentIntent = PendingIntent.getActivity(context, 0,

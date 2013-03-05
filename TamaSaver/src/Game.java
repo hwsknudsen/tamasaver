@@ -99,9 +99,11 @@ public class Game {
 		builder.setNeutralButton("Exit Game",
 				new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int id) {
+				Log.e("hi1","h1i");
+
+				Main.exitgame();
 
 				EasyTracker.getTracker().sendEvent("game", "action", "exit", null);
-
 
 				Toast.makeText(Game.context, "Thanks for playing please Try Again Soon", Toast.LENGTH_LONG).show();
 				dialog.cancel();
@@ -113,7 +115,6 @@ public class Game {
 			public void onClick(DialogInterface dialog,int id) {
 
 				EasyTracker.getTracker().sendEvent("game", "action", "skip", null);
-
 
 				dialog.cancel();
 				Main.changemoodby((int) (-10*Math.random()),context);

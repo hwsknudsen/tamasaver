@@ -306,7 +306,7 @@ public class Main extends Activity{
 	}
 
 
-	private static void update() {
+	static void update() {
 
 		if(!goingto.isEmpty()){
 			Actions thisanimation = goingto.get(0);
@@ -420,9 +420,18 @@ public class Main extends Activity{
 		     })
 		     .show();
 		}
-
+		EasyTracker.getTracker().sendEvent("backgroundaction", "moodchange", "newmood", (long) currentmood);
 		Log.e("moodupdate", String.valueOf(currentmood));
 
+	}
+
+	public static void exitgame() {
+		// TODO Auto-generated method stub		
+		Log.e("hi","hi");
+
+		animations.Wink();
+		animations.jump();
+		update();
 	}
 
 
