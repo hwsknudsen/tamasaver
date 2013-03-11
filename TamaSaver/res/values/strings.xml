@@ -21,7 +21,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="title_activity_awards">Awards</string>
-    <string name="welcomeexplanation">TamaSaver will hopefully encourage you to save energy and learn about saving energy thought A simple game and a basic playfull interaction. The game can be started form the home screen by choosing the dice and doing well at the game will result in the TamaSaver Character becoming happier alotught losing will result in the character being sadder.  Try The Game Now Click Below</string>
+    <string name="welcomeexplanation">TamaSaver will hopefully encourage you to save energy and learn about saving energy thought A simple game and a basic playfull interaction. The game can be started form the home screen by choosing the dice and doing well at the game will result in the TamaSaver Character becoming happier altought losing will result in the character being sadder.  Try The Game Now Click Below</string>
     <string name="introduction">The home screen of the application consists of a series of buttons describing areas where energy may be saved in your life. You are encouraged to push a button when feel you have saved energy  in one of them, doing this regullarly will keep your character happy and well feed, failing to save energy will result in the character feeling neglected. The buttons are shown below.</string>
 
 </resources>

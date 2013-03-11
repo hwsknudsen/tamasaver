@@ -1,5 +1,6 @@
 package com.hwsknudsen.tamasaver;
 
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class Main extends Activity{
 
 
 	Game data = new Game(this);
-	public SharedPreferences settings;
+	public static SharedPreferences settings;
 	static SQLiteDatabase myDB;
 
 	public static ImageView iv;
@@ -67,7 +68,7 @@ public class Main extends Activity{
 
 	@Override
 	public void onSaveInstanceState(Bundle savedInstanceState) {
-	  super.onSaveInstanceState(savedInstanceState);
+		super.onSaveInstanceState(savedInstanceState);
 
 		// We need an Editor object to make preference changes.
 		// All objects are from android.context.Context
@@ -78,7 +79,7 @@ public class Main extends Activity{
 		// Commit the edits!
 		editor.commit();
 	}
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -88,7 +89,7 @@ public class Main extends Activity{
 		setContentView(R.layout.activity_home);
 
 		data.firstrun = settings.getBoolean("firstRun", true);
-		this.dbname = settings.getString("dbname", "mydb");
+		dbname = settings.getString("dbname", "mydb");
 
 		currentmood = settings.getInt("mood", 500);
 
@@ -210,16 +211,23 @@ public class Main extends Activity{
 		animations.Light();
 		changemoodby(50,data.context);
 
+		prefeditint("lightpresses",+1, data.context);
+
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "light", null);
 
 	}
 
+
+
 	public void bCHeat(View v){
 		animations.Heat();
 		changemoodby(50,data.context);
 
+		prefeditint("heatpresses",+1, data.context);
+
+		
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "heat", null);
@@ -227,13 +235,13 @@ public class Main extends Activity{
 	}
 
 	public void bCElectronic(View v){
-		//
-		//		Calendar cal = Calendar.getInstance();
-		//		cal.add(Calendar.SECOND, 5);
 
 		animations.Electornic();
 
 		changemoodby(50,data.context);
+		
+		prefeditint("electronicpresses",+1, data.context);
+
 		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "electronics", null);
 
@@ -242,6 +250,9 @@ public class Main extends Activity{
 	public void bCMotd(View v){
 		Game.motdrandom(data.context);
 		changemoodby(50,data.context);
+		
+		prefeditint("motdpresses",+1, data.context);
+
 		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "motd", null);
 
@@ -250,6 +261,9 @@ public class Main extends Activity{
 	public void bCAppliance(View v){
 		animations.Appliance();
 		changemoodby(50,data.context);
+		
+		prefeditint("appliancepresses",+1, data.context);
+
 		update();
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "appliance", null);
 
@@ -259,6 +273,8 @@ public class Main extends Activity{
 
 		animations.Water();
 		changemoodby(50,data.context);
+
+		prefeditint("waterpresses",+1, data.context);
 
 		update();
 
@@ -271,6 +287,9 @@ public class Main extends Activity{
 		animations.Walk();
 		changemoodby(50,data.context);
 
+		prefeditint("walkingpresses",+1, data.context);
+
+		
 		update();
 
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "walking", null);
@@ -280,6 +299,9 @@ public class Main extends Activity{
 	public void bCGame(View v){
 		Game.myGame(data.context);
 
+		prefeditint("gamepresses",+1, data.context);
+
+		
 		EasyTracker.getTracker().sendEvent("ui_action", "button_press", "game", null);
 
 	}
@@ -388,40 +410,41 @@ public class Main extends Activity{
 			changebasefaceduetomood();
 		} else if(currentmood>=1000){
 			new AlertDialog.Builder(context)
-		    .setTitle("Gretness !")
-		    .setMessage("You have achieved energy saving enlightenment? Would you like to start again?")
-		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		        	currentmood=500;
+			.setTitle("Gretness !")
+			.setMessage("You have achieved energy saving enlightenment? Would you like to start again?")
+			.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					currentmood=500;
 					changebasefaceduetomood();
 
-		        	}
-		     })
-		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		            // do nothing
-		        }
-		     })
-		     .show();
+				}
+			})
+			.setNegativeButton("No", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// do nothing
+				}
+			})
+			.show();
 		} else if(currentmood<=0){
 			new AlertDialog.Builder(context)
-		    .setTitle("Sad News !")
-		    .setMessage("You need more time to achieve greatness in energy saving? Would you like to start again?")
-		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		        	currentmood=500;
+			.setTitle("Sad News !")
+			.setMessage("You need more time to achieve greatness in energy saving? Would you like to start again?")
+			.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					currentmood=500;
 					changebasefaceduetomood();
-		        }
-		     })
-		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		            // do nothing
-		        }
-		     })
-		     .show();
+				}
+			})
+			.setNegativeButton("No", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// do nothing
+				}
+			})
+			.show();
 		}
 		//Awards mai = Awards.getInstance();
 
+		
 		Log.e("moodupdate", String.valueOf(currentmood));
 		EasyTracker.getTracker().sendEvent("backgroundaction", "moodchange", "currentmood", (long) currentmood);
 
@@ -437,7 +460,18 @@ public class Main extends Activity{
 		update();
 	}
 
+	private static void prefeditint(String string, int i, Context context) {
 
+		int oldint = settings.getInt(string, 0);
+		int newint = oldint +i;
+
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+		SharedPreferences.Editor editor = settings.edit();
+		editor.putInt(string, newint);
+
+		// Commit the edits!
+		editor.commit();		
+	}
 
 
 }

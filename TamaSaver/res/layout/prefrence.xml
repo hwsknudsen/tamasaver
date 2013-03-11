@@ -17,8 +17,8 @@
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="easygame"
-        android:summary="Give Game Hints"
-        android:title="@string/gamehints" />
+        android:summary="@string/gamehints"
+        android:title="Give Game Hints" />
     
     <CheckBoxPreference
         android:defaultValue="true"
