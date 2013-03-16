@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Table>
 	<Row>
-		<Text>Swtch off lights in roms that aren't bing used (6-11 pm duringwek and 8 am to
-11pm on weekends).</Text>
+		<Text>Switch off lights in rooms that aren’t being used (6-11 pm during week and 8 am to 11pm on weekends).</Text>
 		<carbonusage>0.359</carbonusage>
 	</Row>
 	<Row>
-		<Text>svtch off lights in offices that aren't bing used. (7pm-7am during the week and
-24hours at the</Text>
+		<Text>Switch off lights in offices that aren’t being used. (7pm-7am during the week and 24hours at the weekend)</Text>
 		<carbonusage>19.747</carbonusage>
 	</Row>
 	<Row>
@@ -15,121 +13,103 @@
 		<carbonusage>4.388</carbonusage>
 	</Row>
 	<Row>
-		<Text>Use a single lamp to illuminate only the area you are using. rather than lighting up
-whole room or</Text>
-		<carbonusage>4.19</carbonusage>
+		<Text>If you'd like any free bulbs please write the number of people in the group in the box below</Text>
+		<carbonusage>0</carbonusage>
 	</Row>
 	<Row>
-		<Text>Maximise the use of natural daylight.   Relocate wr surfaces, desks and reading
-areas nearer to</Text>
-		<carbonusage>4.388</carbonusage>
-	</Row>
-	<Row>
-		<Text>Clean your window to let in more natural light</Text>
-		<carbonusage>0.823</carbonusage>
-	</Row>
-	<Row>
-		<Text>Paint your walls and ceilings a light colour next time you decrate</Text>
-		<carbonusage>0.101</carbonusage>
-	</Row>
-	<Row>
-		<Text>Install occupancy sensorswich tum lights on or off depending on whether there is
-someone in the room</Text>
-		<carbonusage>2.56</carbonusage>
+		<Text>Switch all electrical equipment off at the wall when not in use.</Text>
+		<carbonusage>1.257</carbonusage>
 	</Row>
 	<Row>
 		<Text>Unplug any chargers once they have finished charging.</Text>
 		<carbonusage>0.029</carbonusage>
 	</Row>
 	<Row>
-		<Text>Swtch all electrical equipment off at the wall when not in use.</Text>
-		<carbonusage>1.257</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use the off switch on appliances Instead of standby.</Text>
-		<carbonusage>0.007</carbonusage>
-	</Row>
-	<Row>
-		<Text>Swtch your cmputer/monitor off every night AND every time you are away for a
-period of time</Text>
-		<carbonusage>8.034</carbonusage>
-	</Row>
-	<Row>
-		<Text>Switch off office equipment at night</Text>
-		<carbonusage>44.536</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use a 'power-dow' plug: this device turs off all peripheral devices when you tum
-off your main computer unit, and starts them up again</Text>
-		<carbonusage>0.914</carbonusage>
-	</Row>
-	<Row>
-		<Text>Ensure that energy saving features of your cmputers are activated.</Text>
-		<carbonusage>0.29</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use the stairs instead of the lift at home and at wr</Text>
-		<carbonusage>4.144</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce the brightness on your TV.  If you have a LCD TV, you can usually tum
-dowthe</Text>
-		<carbonusage>1.038</carbonusage>
-	</Row>
-	<Row>
-		<Text>Watch TV fewer nights per week, or less time each night • and do something active</Text>
-		<carbonusage>0.985</carbonusage>
-	</Row>
-	<Row>
-		<Text>When buying a new TV,  buy a small one</Text>
-		<carbonusage>1.785</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tum dishwashers off at the wall when not in use</Text>
-		<carbonusage>0.086</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce the use of electric fans on hot days.</Text>
-		<carbonusage>0.057</carbonusage>
-	</Row>
-	<Row>
-		<Text>When buying a new radio. buy an Energy Saving Recmmended digital one.</Text>
-		<carbonusage>0.023</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use LED Christmas lights instead of the standard equivalent.</Text>
-		<carbonusage>0.607</carbonusage>
-	</Row>
-	<Row>
-		<Text>Wear slippers instead of outdoor shoes in the house to reduce the need to hoover.</Text>
-		<carbonusage>0.327</carbonusage>
-	</Row>
-	<Row>
-		<Text>Switch your electricity supplier to one that supplies green energy</Text>
-		<carbonusage>0.553</carbonusage>
-	</Row>
-	<Row>
-		<Text>When boiling the kettle, use only the amount ofwter that you need.</Text>
+		<Text>When boiling the kettle, use only the amount of water that you need.</Text>
 		<carbonusage>1.486</carbonusage>
-	</Row>
-	<Row>
-		<Text>When changing your shower unit, purchase the most energy efficient shower you</Text>
-		<carbonusage>2.885</carbonusage>
 	</Row>
 	<Row>
 		<Text>Defrost your fridge and freezer</Text>
 		<carbonusage>0.192</carbonusage>
 	</Row>
 	<Row>
-		<Text>Clean the cndenser coils at the back of your fridge</Text>
+		<Text>Clean the condenser coils at the back of your fridge</Text>
 		<carbonusage>0.402</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use a single lamp to illuminate only the area you are using, rather than lighting up the whole room or office.</Text>
+		<carbonusage>4.19</carbonusage>
+	</Row>
+	<Row>
+		<Text>Switch your computer/monitor off every night AND every time you are away for a long period of time </Text>
+		<carbonusage>8.034</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use the stairs instead of the lift at home and at work</Text>
+		<carbonusage>4.144</carbonusage>
+	</Row>
+	<Row>
+		<Text>Change to: Get an energy monitor. Instead of: Consider getting an energy monitor.</Text>
+		<carbonusage>2.512</carbonusage>
+	</Row>
+	<Row>
+		<Text>Switch off office equipment at night</Text>
+		<carbonusage>44.536</carbonusage>
 	</Row>
 	<Row>
 		<Text>Ensure your fridge/freezer are operating at the correct temperatures.</Text>
 		<carbonusage>0.367</carbonusage>
 	</Row>
 	<Row>
-		<Text>Check for damage to the door seal on your fridge I freezer</Text>
+		<Text>Reduce the use of electric fans on hot days.</Text>
+		<carbonusage>0.057</carbonusage>
+	</Row>
+	<Row>
+		<Text>Maximise the use of natural daylight.  Relocate work surfaces, desks and reading areas nearer to windows.</Text>
+		<carbonusage>4.388</carbonusage>
+	</Row>
+	<Row>
+		<Text>Allow frozen food to defrost before you cook it, rather than cooking from frozen.</Text>
+		<carbonusage>0.095</carbonusage>
+	</Row>
+	<Row>
+		<Text>Only iron the clothes that really need ironing.</Text>
+		<carbonusage>0.599</carbonusage>
+	</Row>
+	<Row>
+		<Text>Put lids on pans when boiling water</Text>
+		<carbonusage>0.499</carbonusage>
+	</Row>
+	<Row>
+		<Text>Turn your oven off ten minutes before your dinner is finished cooking. </Text>
+		<carbonusage>0.269</carbonusage>
+	</Row>
+	<Row>
+		<Text>Clean your windows to let in more natural light</Text>
+		<carbonusage>0.823</carbonusage>
+	</Row>
+	<Row>
+		<Text>Make sure the escalator is only running when the shop is open</Text>
+		<carbonusage>28.379</carbonusage>
+	</Row>
+	<Row>
+		<Text>Ensure that energy saving features of your computers are activated.</Text>
+		<carbonusage>0.29</carbonusage>
+	</Row>
+	<Row>
+		<Text>Fix a timer to a vending machine turning it off out of working hours.</Text>
+		<carbonusage>46.663</carbonusage>
+	</Row>
+	<Row>
+		<Text>When replacing office equipment, buy a combination fax/copier/printer.</Text>
+		<carbonusage>27.078</carbonusage>
+	</Row>
+	<Row>
+		<Text>Consider using reduced lighting in the store while you are working and the shop is closed</Text>
+		<carbonusage>9.142</carbonusage>
+	</Row>
+	<Row>
+		<Text>Check for damage to the door seal on your fridge / freezer</Text>
 		<carbonusage>0.917</carbonusage>
 	</Row>
 	<Row>
@@ -137,77 +117,15 @@ dowthe</Text>
 		<carbonusage>0.0002</carbonusage>
 	</Row>
 	<Row>
-		<Text>Avoid opening fridge/freezer door unnecessarily</Text>
-		<carbonusage>0.0002</carbonusage>
+		<Text>Turn dishwashers off at the wall when not in use</Text>
+		<carbonusage>0.086</carbonusage>
 	</Row>
 	<Row>
-		<Text>Try to position your fridge freezer away from a heat sourc. e.g. oven or radiator.</Text>
-		<carbonusage>0.917</carbonusage>
+		<Text>Reduce the brightness on your TV.  If you have a LCD TV, you can usually turn down the backlight</Text>
+		<carbonusage>1.038</carbonusage>
 	</Row>
 	<Row>
-		<Text>When buying a new Fridge/Freezer buy one with an A+ or A++ rating</Text>
-		<carbonusage>2.692</carbonusage>
-	</Row>
-	<Row>
-		<Text>When buying a new freezer buy one wth an A+ or A++ rating.</Text>
-		<carbonusage>1.538</carbonusage>
-	</Row>
-	<Row>
-		<Text>When buying a new dishwasher buy one wth an A ratin</Text>
-		<carbonusage>0.923</carbonusage>
-	</Row>
-	<Row>
-		<Text>When buying a new Fridge buy one with an A+ or A++ rating</Text>
-		<carbonusage>0.865</carbonusage>
-	</Row>
-	<Row>
-		<Text>Where appropriate, re-use any cups, glasses or dishes rather than taking a dean
-one time.</Text>
-		<carbonusage>0.571</carbonusage>
-	</Row>
-	<Row>
-		<Text>Only iron the clothes that really need ironing.</Text>
-		<carbonusage>0.599</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use a lower temperature wash on your washing machine.</Text>
-		<carbonusage>0.212</carbonusage>
-	</Row>
-	<Row>
-		<Text>Try to  reduce the number of times you use the washing machine each week.</Text>
-		<carbonusage>1.943</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you live in shared accmmodation. consider filling the washing machine up with
-several dotes rather than half loads.</Text>
-		<carbonusage>1.943</carbonusage>
-	</Row>
-	<Row>
-		<Text>Pre soak heavily soiled clothes to decrease necessity to wash at high temperatures</Text>
-		<carbonusage>0.212</carbonusage>
-	</Row>
-	<Row>
-		<Text>Wait for a full load before washing dothes.</Text>
-		<carbonusage>1.943</carbonusage>
-	</Row>
-	<Row>
-		<Text>Dry your dothes outside instead of using a tumble dryer</Text>
-		<carbonusage>2.971</carbonusage>
-	</Row>
-	<Row>
-		<Text>Allow frozen food to defrost before you cook it, rather than cooking from frozen.</Text>
-		<carbonusage>0.095</carbonusage>
-	</Row>
-	<Row>
-		<Text>Put lids on pans when boiling water</Text>
-		<carbonusage>0.499</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tum your oven off ten minutes before your dinner is finished cooking.</Text>
-		<carbonusage>0.269</carbonusage>
-	</Row>
-	<Row>
-		<Text>Choose the right size pan for the size of the food that you are cooking</Text>
+		<Text>Choose the right size pan for the size of the food that you are cooking </Text>
 		<carbonusage>1.905</carbonusage>
 	</Row>
 	<Row>
@@ -219,7 +137,7 @@ several dotes rather than half loads.</Text>
 		<carbonusage>0.061</carbonusage>
 	</Row>
 	<Row>
-		<Text>Chop vegetables/meats into smaller sizes when coking</Text>
+		<Text>Chop vegetables/meats into smaller sizes when cooking</Text>
 		<carbonusage>0.759</carbonusage>
 	</Row>
 	<Row>
@@ -227,265 +145,83 @@ several dotes rather than half loads.</Text>
 		<carbonusage>0.135</carbonusage>
 	</Row>
 	<Row>
-		<Text>Cook on several levels using a steamer on one cker ring.</Text>
+		<Text>Cook on several levels using a steamer on one cooker ring.</Text>
 		<carbonusage>4.317</carbonusage>
 	</Row>
 	<Row>
-		<Text>Consider buying an induction hob when replacing an eletric hob</Text>
+		<Text>CHANGE TO: Use LED Christmas lights instead of the standard equivalent. INSTEAD OF: If choosing Christmas lights, consider LEDs </Text>
+		<carbonusage>0.607</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use a power-down plug.  </Text>
+		<carbonusage>0.914</carbonusage>
+	</Row>
+	<Row>
+		<Text>Open fridge/freezer door less often Instead of.: Close fridge/freezer doors as quickly as possible</Text>
+		<carbonusage>0.0002</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use the off switch on appliances instead of standby.</Text>
+		<carbonusage>0.007</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: When buying a new radio, buy an Energy Saving Recommended digital one.</Text>
+		<carbonusage>0.023</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to position your fridge freezer away from a heat source, e.g. oven or radiator.</Text>
+		<carbonusage>0.917</carbonusage>
+	</Row>
+	<Row>
+		<Text>Watch TV fewer nights per week, or less time each night - and do something active instead!</Text>
+		<carbonusage>0.985</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Switch your electricity supplier to one that supplies green energy</Text>
+		<carbonusage>0.553</carbonusage>
+	</Row>
+	<Row>
+		<Text>When buying a new Fridge/Freezer buy one with an A+ or A++ rating</Text>
+		<carbonusage>2.692</carbonusage>
+	</Row>
+	<Row>
+		<Text>When buying a new freezer buy one with an A+ or A++ rating.</Text>
+		<carbonusage>1.538</carbonusage>
+	</Row>
+	<Row>
+		<Text>When buying a new dishwasher buy one with an A rating</Text>
+		<carbonusage>0.923</carbonusage>
+	</Row>
+	<Row>
+		<Text>When buying a new Fridge buy one with an A+ or A++ rating</Text>
+		<carbonusage>0.865</carbonusage>
+	</Row>
+	<Row>
+		<Text>'Long term action: Consider buying an induction hob when replacing an electric hob</Text>
 		<carbonusage>7.55</carbonusage>
 	</Row>
 	<Row>
-		<Text>Buy a pressure cooker</Text>
+		<Text>Long term action: Paint your walls and ceilings a light colour next time you decorate</Text>
+		<carbonusage>0.101</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Install occupancy sensors which turn lights on or off depending on whether there is someone in the room</Text>
+		<carbonusage>2.56</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: When buying a new TV,  buy a small one </Text>
+		<carbonusage>1.785</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Buy a pressure cooker</Text>
 		<carbonusage>0.838</carbonusage>
 	</Row>
 	<Row>
-		<Text>Buy a slow cooker</Text>
+		<Text>Long term action: Buy a slow cooker</Text>
 		<carbonusage>0.707</carbonusage>
 	</Row>
 	<Row>
-		<Text>Put on warmer dothes instead of turning up the heatng</Text>
-		<carbonusage>7.539</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tur heating dowto minimal (or off) when away from hme</Text>
-		<carbonusage>26.901</carbonusage>
-	</Row>
-	<Row>
-		<Text>If your heating is set above the cmfortable room tempeture or 18-21oC. tur it</Text>
-		<carbonusage>7.539</carbonusage>
-	</Row>
-	<Row>
-		<Text>Switch off heating during the night • use an extra blanket or thicker duvet.</Text>
-		<carbonusage>37.822</carbonusage>
-	</Row>
-	<Row>
-		<Text>Swtch the heating off 1 hour before bedtme</Text>
-		<carbonusage>9.423</carbonusage>
-	</Row>
-	<Row>
-		<Text>Experiment with altering heating and cooling thermostats.  As a guide, t setting no
-higher than 19°C for heating and no lower than 24°C for cooling.</Text>
-		<carbonusage>7.539</carbonusage>
-	</Row>
-	<Row>
-		<Text>Turn the heat off in rooms that you are not using</Text>
-		<carbonusage>12.56</carbonusage>
-	</Row>
-	<Row>
-		<Text>Shut the doors between rooms</Text>
-		<carbonusage>18.846</carbonusage>
-	</Row>
-	<Row>
-		<Text>Draw all your curains at nightfall</Text>
-		<carbonusage>10.554</carbonusage>
-	</Row>
-	<Row>
-		<Text>Place insulation panels behind your radiators</Text>
-		<carbonusage>2.308</carbonusage>
-	</Row>
-	<Row>
-		<Text>Install radiator thermometers</Text>
-		<carbonusage>12.816</carbonusage>
-	</Row>
-	<Row>
-		<Text>Check that radiators are wrking properly</Text>
-		<carbonusage>11.308</carbonusage>
-	</Row>
-	<Row>
-		<Text>Make sure there isn furiture in front of your radiators</Text>
-		<carbonusage>15.077</carbonusage>
-	</Row>
-	<Row>
-		<Text>Only use air conditioning wen it's really necessary.</Text>
-		<carbonusage>4.694</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you are using air conditioning. keep the window and doors closed.</Text>
-		<carbonusage>6.258</carbonusage>
-	</Row>
-	<Row>
-		<Text>Set the air conditioning thermostat at the highest temperature with wich you are
-comfortable.</Text>
-		<carbonusage>1.502</carbonusage>
-	</Row>
-	<Row>
-		<Text>Put draught proofing around doors and window</Text>
-		<carbonusage>2.5</carbonusage>
-	</Row>
-	<Row>
-		<Text>Find out if you have the recmmended 270mm depth of loft insulation. If not,
-cnsider it.</Text>
-		<carbonusage>15.385</carbonusage>
-	</Row>
-	<Row>
-		<Text>Put cavity insulation in yourwlls</Text>
-		<carbonusage>11.731</carbonusage>
-	</Row>
-	<Row>
-		<Text>Insulate your hotwter tank and pipes.</Text>
-		<carbonusage>4.808</carbonusage>
-	</Row>
-	<Row>
-		<Text>Find out if your boiler needs replacing and if there are grants available to help you.</Text>
-		<carbonusage>24.877</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you are a tenant, ask for a boiler maintenance certificate fom your landlord or</Text>
-		<carbonusage>7.539</carbonusage>
-	</Row>
-	<Row>
-		<Text>For short joureys, try not to use a car. Walk or cycle instead.</Text>
-		<carbonusage>0.66</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you don't have a bike, cnsider buying one under the cycle to work scheme.  Or
-second hand one.</Text>
-		<carbonusage>4.917</carbonusage>
-	</Row>
-	<Row>
-		<Text>As well as deciding to holiday in the UK, choose destinations reached by coach or</Text>
-		<carbonusage>10.422</carbonusage>
-	</Row>
-	<Row>
-		<Text>Contact your locl MSPs and councillors and campaign for improved transport and
-infrastructure</Text>
-		<carbonusage>0</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce the amount of business flights you take, try to travel by public transport or lift
-share to a</Text>
-		<carbonusage>12.519</carbonusage>
-	</Row>
-	<Row>
-		<Text>Try to reduce the number of UK interal flights you take a year</Text>
-		<carbonusage>7.264</carbonusage>
-	</Row>
-	<Row>
-		<Text>Plan a UK based holiday rather than flying abroad</Text>
-		<carbonusage>16.655</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you are travelling to Europe for holiday or work, cnsider using public transport or for a footprint with 4 tonnes of air travel • actual savings w i l l  depend on original flight footprint </Text>
-		<carbonusage>3.509</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce flights by 25%</Text>
-		<carbonusage>19.230769</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce flight by 50%</Text>
-		<carbonusage>38.462</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce flights by 75%</Text>
-		<carbonusage>57.692</carbonusage>
-	</Row>
-	<Row>
-		<Text>Stop flying totally</Text>
-		<carbonusage>76.923</carbonusage>
-	</Row>
-	<Row>
-		<Text>Walk or cycle to work instead of using your car</Text>
-		<carbonusage>4.917</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you are buying a car, think about the energy and carbon used to produce it, as well
-as it's fuel when are it.
-</Text>
-		<carbonusage>6.19</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use public transport to get to work.  Find out about bus and train times.</Text>
-		<carbonusage>17.249</carbonusage>
-	</Row>
-	<Row>
-		<Text>Use lift sharing when travelling towrk.</Text>
-		<carbonusage>12.292</carbonusage>
-	</Row>
-	<Row>
-		<Text>Talk to your organisation about lower carbon travel to work options</Text>
-		<carbonusage>12.03</carbonusage>
-	</Row>
-	<Row>
-		<Text>Lobby your organisation to provide a bike pool for short work journeys</Text>
-		<carbonusage>4.917</carbonusage>
-	</Row>
-	<Row>
-		<Text>Speak to your organisation about providing a shuttle bus service for employees?</Text>
-		<carbonusage>12.03</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tur off the engine when you are not driving (e.g., if you are waiting for someone or
-stuck in</Text>
-		<carbonusage>0.24</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you live near a supermarket, wlk or cycle there to do your shopping</Text>
-		<carbonusage>2.453</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce your cr trips to te supermarket· do one big weekly shop, or combine your
-with another car</Text>
-		<carbonusage>1.226</carbonusage>
-	</Row>
-	<Row>
-		<Text>If you drive to the supermarket cnsider doing your weekly supermarket shop online</Text>
-		<carbonusage>4.093</carbonusage>
-	</Row>
-	<Row>
-		<Text>Get your food shopping delivery at the same time as your neighbours.</Text>
-		<carbonusage>8.367</carbonusage>
-	</Row>
-	<Row>
-		<Text>Take part in or set up awlking bus group for your cildren's school.</Text>
-		<carbonusage>3.298</carbonusage>
-	</Row>
-	<Row>
-		<Text>Reduce the amount of meetings you travel to by using tele and video conferencing.</Text>
-		<carbonusage>3.627</carbonusage>
-	</Row>
-	<Row>
-		<Text>Ask your organisation to provide advanced driver training andl or eco-driving training
-to all those who drive vehicles.</Text>
-		<carbonusage>24.944</carbonusage>
-	</Row>
-	<Row>
-		<Text>Investigate ec-driving techniques.</Text>
-		<carbonusage>9.511</carbonusage>
-	</Row>
-	<Row>
-		<Text>Accelerate slowty and smoothly, maintain a steady speed (within the speed limit!)
-and and starts.</Text>
-		<carbonusage>9.511</carbonusage>
-	</Row>
-	<Row>
-		<Text>Stick to the most efficient speed of your car to minimise fuel consumption.</Text>
-		<carbonusage>9.511</carbonusage>
-	</Row>
-	<Row>
-		<Text>Ensure vehicles are correctly maintained.</Text>
-		<carbonusage>5.389</carbonusage>
-	</Row>
-	<Row>
-		<Text>Ensure tyres at correct pressure.</Text>
-		<carbonusage>1.902</carbonusage>
-	</Row>
-	<Row>
-		<Text>Remove roof racks I boxes and cycle racks from your car.  Clear out any heavy
-clutter have in car.</Text>
-		<carbonusage>3.804</carbonusage>
-	</Row>
-	<Row>
-		<Text>Plan your joureys to avoid congestion. Use SatNav or similar IT applications to
-avoid traffic congestion and reduce the amount of wasted jourey time.</Text>
-		<carbonusage>10.145</carbonusage>
-	</Row>
-	<Row>
-		<Text>Convert to lpg fuel</Text>
-		<carbonusage>8.04</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tr to buy food that is grow or produced locally</Text>
+		<Text>Try to buy food that is grown or produced locally</Text>
 		<carbonusage>1.452</carbonusage>
 	</Row>
 	<Row>
@@ -493,31 +229,11 @@ avoid traffic congestion and reduce the amount of wasted jourey time.</Text>
 		<carbonusage>6.923</carbonusage>
 	</Row>
 	<Row>
-		<Text>Consider reducing the amount of meat that you eat by 75%</Text>
-		<carbonusage>10.385</carbonusage>
-	</Row>
-	<Row>
-		<Text>Consider reducing the amount of meat that you eat by 100%</Text>
-		<carbonusage>13.846</carbonusage>
-	</Row>
-	<Row>
 		<Text>Consider reducing the amount of dairy products you eat by 25%</Text>
 		<carbonusage>5</carbonusage>
 	</Row>
 	<Row>
-		<Text>Consider reducing the amount of dairy products you eat by 50%</Text>
-		<carbonusage>10</carbonusage>
-	</Row>
-	<Row>
-		<Text>Consider reducing the amount of dairy products you eat by 75%</Text>
-		<carbonusage>15</carbonusage>
-	</Row>
-	<Row>
-		<Text>Consider reducing the amount of dairy products you eat by 100%</Text>
-		<carbonusage>20</carbonusage>
-	</Row>
-	<Row>
-		<Text>Cook a vegetarian meal</Text>
+		<Text>Cook a vegetarian meal  </Text>
 		<carbonusage>1.151</carbonusage>
 	</Row>
 	<Row>
@@ -525,41 +241,364 @@ avoid traffic congestion and reduce the amount of wasted jourey time.</Text>
 		<carbonusage>1.443</carbonusage>
 	</Row>
 	<Row>
-		<Text>Include some (20%) locl organic food in your weekly shop.</Text>
-		<carbonusage>0.885</carbonusage>
-	</Row>
-	<Row>
-		<Text>Buy fresh: avoid pre-prepared fruit and vegetables</Text>
-		<carbonusage>0.148</carbonusage>
-	</Row>
-	<Row>
-		<Text>Tr to remember all the low carbon food rules when shopping: local, organic, low·</Text>
-		<carbonusage>9.346</carbonusage>
-	</Row>
-	<Row>
-		<Text>Make use of thewr I University canteen</Text>
+		<Text>Make use of the work canteen</Text>
 		<carbonusage>0.582</carbonusage>
 	</Row>
 	<Row>
-		<Text>Investigate local food c-ops</Text>
+		<Text>Include some (20%) local organic food in your weekly shop.</Text>
+		<carbonusage>0.885</carbonusage>
+	</Row>
+	<Row>
+		<Text>Avoid pre-prepared fruit and vegetables</Text>
+		<carbonusage>0.148</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to remember all the low carbon food rules when shopping.</Text>
+		<carbonusage>9.346</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Investigate local food co-ops</Text>
 		<carbonusage>0.031</carbonusage>
 	</Row>
 	<Row>
-		<Text>When eating out, coose a restaurant that uses local produce?</Text>
-		<carbonusage>0.016</carbonusage>
-	</Row>
-	<Row>
-		<Text>If hiring catering for events or meetings, cnsider asking for low carbon catering.
-E.g. seasonal fruit and vegetables that are in season and grown locally.</Text>
+		<Text>Long term action: If hiring catering for events or meetings, consider asking for low carbon catering.  E.g. seasonal fruit and vegetables that are in season and grown locally.</Text>
 		<carbonusage>0.465</carbonusage>
 	</Row>
 	<Row>
-		<Text>Become self sufficient in fruit and vegetables</Text>
+		<Text>Long term action: Change to: Become self sufficient in Fruit and Vegetable. Instead of: Grow fruit if you have space in your garden &amp; Start growing your own vegetables</Text>
 		<carbonusage>2.308</carbonusage>
 	</Row>
 	<Row>
-		<Text>Install a water meter</Text>
-		<carbonusage>0.107</carbonusage>
+		<Text>Put on warmer clothes instead of turning up the heating</Text>
+		<carbonusage>7.539</carbonusage>
+	</Row>
+	<Row>
+		<Text>Turn the heat off in rooms that you are not using</Text>
+		<carbonusage>12.564</carbonusage>
+	</Row>
+	<Row>
+		<Text>Shut the doors between rooms</Text>
+		<carbonusage>18.846</carbonusage>
+	</Row>
+	<Row>
+		<Text>Turn heating down to minimal (or off) when away from home</Text>
+		<carbonusage>26.901</carbonusage>
+	</Row>
+	<Row>
+		<Text>Place insulation panels behind your radiators</Text>
+		<carbonusage>2.308</carbonusage>
+	</Row>
+	<Row>
+		<Text>Draw all your curtains at nightfall</Text>
+		<carbonusage>10.554</carbonusage>
+	</Row>
+	<Row>
+		<Text>If your heating is set above the comfortable room temperature of 18-21oC, turn it down.</Text>
+		<carbonusage>7.539</carbonusage>
+	</Row>
+	<Row>
+		<Text>Check that radiators are working properly</Text>
+		<carbonusage>11.308</carbonusage>
+	</Row>
+	<Row>
+		<Text>Make sure there is no furniture in front of your radiators</Text>
+		<carbonusage>15.077</carbonusage>
+	</Row>
+	<Row>
+		<Text>Switch off heating during the night - use an extra blanket or thicker duvet.</Text>
+		<carbonusage>37.822</carbonusage>
+	</Row>
+	<Row>
+		<Text>Only use air conditioning when it's really necessary.</Text>
+		<carbonusage>4.694</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to use open windows and doors to cool workspaces, rather than use air conditioning.</Text>
+		<carbonusage>12.516</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you are using air conditioning, keep the windows and doors closed.</Text>
+		<carbonusage>6.258</carbonusage>
+	</Row>
+	<Row>
+		<Text>Set the air conditioning thermostat at the highest temperature with which you are comfortable.</Text>
+		<carbonusage>1.502</carbonusage>
+	</Row>
+	<Row>
+		<Text>Change to: Change your air conditioning filters every month Instead of: Clean your air conditioning filters </Text>
+		<carbonusage>6.508</carbonusage>
+	</Row>
+	<Row>
+		<Text>Switch the heating off 1 hour before bedtime </Text>
+		<carbonusage>9.423</carbonusage>
+	</Row>
+	<Row>
+		<Text>Experiment with altering heating and cooling thermostats.  As a guide, try setting no higher than 19OC for heating and no lower than 24oC for cooling.</Text>
+		<carbonusage>7.539</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Put draught proofing around doors and windows</Text>
+		<carbonusage>2.5</carbonusage>
+	</Row>
+	<Row>
+		<Text>Find out if you have the recommended 270mm depth of loft insulation.  If not, consider fitting it.</Text>
+		<carbonusage>15.385</carbonusage>
+	</Row>
+	<Row>
+		<Text>Put cavity insulation in your walls</Text>
+		<carbonusage>11.731</carbonusage>
+	</Row>
+	<Row>
+		<Text>Insulate your hot water tank and pipes.</Text>
+		<carbonusage>4.808</carbonusage>
+	</Row>
+	<Row>
+		<Text>Find out if your boiler needs replacing and if there are grants available to help you.</Text>
+		<carbonusage>24.877</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Install radiator thermometers</Text>
+		<carbonusage>12.816</carbonusage>
+	</Row>
+	<Row>
+		<Text>Automatic doors - make sure they only open when they are meant to.</Text>
+		<carbonusage>77.237</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you are a tenant, ask for a boiler maintenance certificate from your landlord or estate agent.</Text>
+		<carbonusage>7.539</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: If you use plastic cups, plates, cutlery etc. at a party, picnic or BBQ, wash them and reuse them - don't throw them away!</Text>
+		<carbonusage>-1.359</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Buy music online and use an MP3 player instead of buying CDs.</Text>
+		<carbonusage>1.4</carbonusage>
+	</Row>
+	<Row>
+		<Text>Could you make a Christmas or Birthday card or present instead of buying something?</Text>
+		<carbonusage>1.538</carbonusage>
+	</Row>
+	<Row>
+		<Text>'If you have large gardens could your family mow some parts a bit less, encourage tall grasses &amp; more wildlife.</Text>
+		<carbonusage>0.583</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use recycled or Forest Stewardship Council (FSC) certified paper</Text>
+		<carbonusage>0.127</carbonusage>
+	</Row>
+	<Row>
+		<Text>Send celebration e-cards or texts.</Text>
+		<carbonusage>0.027</carbonusage>
+	</Row>
+	<Row>
+		<Text>Avoid the use of patio heaters.</Text>
+		<carbonusage>8.707</carbonusage>
+	</Row>
+	<Row>
+		<Text>Do you really need another computer, laptop, blackberry, printer, scanner etc. in your household?</Text>
+		<carbonusage>9.762</carbonusage>
+	</Row>
+	<Row>
+		<Text>Do you really need to get a new computer?</Text>
+		<carbonusage>18.427</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Organise a clothes swapping night</Text>
+		<carbonusage>0.75</carbonusage>
+	</Row>
+	<Row>
+		<Text>Make your own lunch instead of buying sandwiches</Text>
+		<carbonusage>0.597</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: When eating out, can you find a restaurant that uses local produce?</Text>
+		<carbonusage>0.016</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: If you are buying new furniture, ensure that any wood used comes from forests that have been sustainably managed.  Look for the Forest Stewardship Council (FSC) logo on products. </Text>
+		<carbonusage>0.135</carbonusage>
+	</Row>
+	<Row>
+		<Text>'Long term action: When buying new equipment check lifespan, guarantee and if it can be easily repaired.</Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: When doing home DIY use timber that is reclaimed, or that is Forest Stewardship Council certified (FSC).</Text>
+		<carbonusage>1.654</carbonusage>
+	</Row>
+	<Row>
+		<Text>Can you use public transport to get to work? Find out about bus and train times.</Text>
+		<carbonusage>17.249</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use public transport instead of driving to work - even if it's just for one day a week.</Text>
+		<carbonusage>2.406</carbonusage>
+	</Row>
+	<Row>
+		<Text>Walk or cycle to work instead of using your car</Text>
+		<carbonusage>4.917</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Use lift sharing when travelling to work.</Text>
+		<carbonusage>12.292</carbonusage>
+	</Row>
+	<Row>
+		<Text>Turn off the engine when you are not driving (e.g., if you are waiting for someone or stuck in traffic)</Text>
+		<carbonusage>0.24</carbonusage>
+	</Row>
+	<Row>
+		<Text>Take part in or set up a walking bus group for your children's school.</Text>
+		<carbonusage>3.298</carbonusage>
+	</Row>
+	<Row>
+		<Text>For short journeys, try not to use the car.  Walk or cycle instead.</Text>
+		<carbonusage>0.66</carbonusage>
+	</Row>
+	<Row>
+		<Text>Change to: Ensure tyres at correct pressure. Instead of: Check your tyre pressure</Text>
+		<carbonusage>1.902</carbonusage>
+	</Row>
+	<Row>
+		<Text>Plan your journeys to avoid congestion.  Use Satnav or similar IT applications to avoid traffic congestion and reduce the amount of wasted journey time.</Text>
+		<carbonusage>10.145</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: If you don't have a bike, consider buying one under the cycle to work scheme.  Or buy a second hand one.</Text>
+		<carbonusage>4.917</carbonusage>
+	</Row>
+	<Row>
+		<Text>Remove roof racks / boxes and cycle racks from your car.  Clear out any heavy clutter you might have in your car.</Text>
+		<carbonusage>3.804</carbonusage>
+	</Row>
+	<Row>
+		<Text>Accelerate slowly and smoothly, maintain a steady speed (within the speed limit!) and anticipate your stops and starts.</Text>
+		<carbonusage>9.511</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: If you are buying a car, think about the energy and carbon used to produce it, as well as it's fuel efficiency when you are using it.</Text>
+		<carbonusage>6.19</carbonusage>
+	</Row>
+	<Row>
+		<Text>Find out what speed you should drive your car at for maximum efficiency.</Text>
+		<carbonusage>9.511</carbonusage>
+	</Row>
+	<Row>
+		<Text>Stick to the most efficient speed of your car to minimise fuel consumption.</Text>
+		<carbonusage>9.511</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you live near a supermarket, can you walk or cycle there to do your shopping?</Text>
+		<carbonusage>2.453</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you drive to the supermarket consider doing your weekly supermarket shop online</Text>
+		<carbonusage>4.093</carbonusage>
+	</Row>
+	<Row>
+		<Text>Investigate Eco driving techniques.</Text>
+		<carbonusage>9.511</carbonusage>
+	</Row>
+	<Row>
+		<Text>Reduce your car trips to the supermarket - do one big weekly shop, or combine your shopping trip with another car journey.</Text>
+		<carbonusage>1.226</carbonusage>
+	</Row>
+	<Row>
+		<Text>Could your employer provide a shuttle bus service for employees?</Text>
+		<carbonusage>12.03</carbonusage>
+	</Row>
+	<Row>
+		<Text>Lobby your employer to provide a bike pool for short work journeys</Text>
+		<carbonusage>4.917</carbonusage>
+	</Row>
+	<Row>
+		<Text>Talk to your employer about organising lower carbon travel to work options</Text>
+		<carbonusage>12.03</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Reduce the amount of meetings you travel to by using tele and video conferencing.</Text>
+		<carbonusage>3.627</carbonusage>
+	</Row>
+	<Row>
+		<Text>'Contact your local MSPs and councillors and campaign for improved transport and cycling infrastructure</Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Provide advanced driver training and/ or Eco driving training to all those who drive company vehicles.</Text>
+		<carbonusage>24.944</carbonusage>
+	</Row>
+	<Row>
+		<Text>Ensure vehicles are correctly maintained.</Text>
+		<carbonusage>5.389</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Reduce the amount of business flights you take, try to travel by public transport or lift share to get to a meeting.</Text>
+		<carbonusage>12.519</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Try to reduce the number of flights you take a year</Text>
+		<carbonusage>7.264</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Plan a UK based holiday rather than flying abroad</Text>
+		<carbonusage>16.655</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: As well as deciding to holiday in the UK, choose destinations reached by coach or train</Text>
+		<carbonusage>10.422</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: If you are travelling to Europe for holiday or work, consider using public transport or driving  </Text>
+		<carbonusage>3.509</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Convert to lpg fuel</Text>
+		<carbonusage>8.04</carbonusage>
+	</Row>
+	<Row>
+		<Text>Get your food shopping delivery at the same time as your neighbours. </Text>
+		<carbonusage>8.367</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy blocks of soap instead of bottles of soap</Text>
+		<carbonusage>0.04</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you have a dual flushing toilet, make sure you use the right flush! </Text>
+		<carbonusage>0.03</carbonusage>
+	</Row>
+	<Row>
+		<Text>Wear slippers instead of outdoor shoes in the house.</Text>
+		<carbonusage>0.327</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to wear clothes for longer and reduce the amount of washes you do.</Text>
+		<carbonusage>1.295</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use a lower temperature wash on your washing machine.</Text>
+		<carbonusage>0.212</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to  reduce the number of times you use the washing machine each week.</Text>
+		<carbonusage>1.943</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you live in shared accommodation, consider filling the washing machine up with several peoples clothes rather than doing half loads.</Text>
+		<carbonusage>1.943</carbonusage>
+	</Row>
+	<Row>
+		<Text>Don't leave the taps or shower running when you are not using it.</Text>
+		<carbonusage>0.363</carbonusage>
+	</Row>
+	<Row>
+		<Text>Where appropriate, re-use any cups, glasses or dishes rather than taking a clean one every time.</Text>
+		<carbonusage>0.571</carbonusage>
+	</Row>
+	<Row>
+		<Text>Reduce water use when washing pots by washing the cleaner things first (glasses, cups), then moving on to the greasy things.</Text>
+		<carbonusage>0.121</carbonusage>
 	</Row>
 	<Row>
 		<Text>Have a the shower instead of a bath</Text>
@@ -570,61 +609,235 @@ E.g. seasonal fruit and vegetables that are in season and grown locally.</Text>
 		<carbonusage>3.186</carbonusage>
 	</Row>
 	<Row>
-		<Text>Set up a water butt and use the water in it to water the garden and houseplants.</Text>
-		<carbonusage>0.003</carbonusage>
+		<Text>Use reusable dishcloths instead of disposable ones.</Text>
+		<carbonusage>0</carbonusage>
 	</Row>
 	<Row>
-		<Text>Don't leave the taps or shower running when you are not using it.</Text>
-		<carbonusage>0.363</carbonusage>
+		<Text>Switch to environmentally friendly cleaning products</Text>
+		<carbonusage>0.75</carbonusage>
 	</Row>
 	<Row>
 		<Text>Fix leaky taps</Text>
 		<carbonusage>0.208</carbonusage>
 	</Row>
 	<Row>
-		<Text>Try to wear clothes for longer and reduce the amount of washes you do.</Text>
-		<carbonusage>1.295</carbonusage>
+		<Text>If you have a child in nappies, consider using reusable or semi-biodegradable nappies instead of disposable ones.</Text>
+		<carbonusage>1.538</carbonusage>
 	</Row>
 	<Row>
-		<Text>Share a bath</Text>
+		<Text>Pre soak heavily soiled clothes to decrease necessity to wash at high temperatures </Text>
+		<carbonusage>0.212</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use recycled or Forest Stewardship Council Certified (FSC)  toilet paper</Text>
+		<carbonusage>0.336</carbonusage>
+	</Row>
+	<Row>
+		<Text>Wait for a full load before washing clothes.</Text>
+		<carbonusage>1.943</carbonusage>
+	</Row>
+	<Row>
+		<Text>Try to exchange bottled water for tap water</Text>
+		<carbonusage>0.449</carbonusage>
+	</Row>
+	<Row>
+		<Text>At work, do you need cleaners every day?  Redeploy them to other areas of work, such as recycling</Text>
+		<carbonusage>8.759</carbonusage>
+	</Row>
+	<Row>
+		<Text>Set up a water butt and use the water in it to water the garden and houseplants.</Text>
+		<carbonusage>0.003</carbonusage>
+	</Row>
+	<Row>
+		<Text>Share a bath  </Text>
 		<carbonusage>2.883</carbonusage>
 	</Row>
 	<Row>
-		<Text>If you have a dual flushing toilet, make sure you use the right flush!</Text>
-		<carbonusage>0.03</carbonusage>
+		<Text>Dry your clothes outside instead of using a tumble dryer</Text>
+		<carbonusage>2.971</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reduce water use when washing pots by washing the cleaner things first (glasses.
-then to the</Text>
-		<carbonusage>0.121</carbonusage>
+		<Text>Long term action: If you use a tumble drier, use dryer balls</Text>
+		<carbonusage>0.743</carbonusage>
 	</Row>
 	<Row>
-		<Text>Recycle your waste  Label your waste and recycling bins so everyone knows what
-should in tem</Text>
+		<Text>Long term action: Purchase the most energy efficient shower you could.</Text>
+		<carbonusage>2.885</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Install a water meter</Text>
+		<carbonusage>0.107</carbonusage>
+	</Row>
+	<Row>
+		<Text>Ask your family if they are recycling and if not ask them what is stopping them. </Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Find out what you can recycle at home</Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Recycle your waste</Text>
 		<carbonusage>1.56</carbonusage>
 	</Row>
 	<Row>
-		<Text>Recycle all glass bottles</Text>
-		<carbonusage>1.67</carbonusage>
+		<Text>Put up the waste collection calendar, available from Stirling Council</Text>
+		<carbonusage>0</carbonusage>
 	</Row>
 	<Row>
 		<Text>Recycle drinks cans</Text>
 		<carbonusage>0.54</carbonusage>
 	</Row>
 	<Row>
-		<Text>Recycle your old bike</Text>
-		<carbonusage>2.077</carbonusage>
+		<Text>Reuse or recycle your ink cartridges</Text>
+		<carbonusage>0.24</carbonusage>
 	</Row>
 	<Row>
-		<Text>Organise a clothes swapping night</Text>
-		<carbonusage>0.75</carbonusage>
+		<Text>Plan your meals in advance to help you avoid food waste</Text>
+		<carbonusage>1.679</carbonusage>
+	</Row>
+	<Row>
+		<Text>Recycle all glass bottles</Text>
+		<carbonusage>1.67</carbonusage>
+	</Row>
+	<Row>
+		<Text>Be aware of food packaging when buying food this week</Text>
+		<carbonusage>3.45</carbonusage>
+	</Row>
+	<Row>
+		<Text>When conventional batteries wear out, replace them with rechargeable ones</Text>
+		<carbonusage>1.392</carbonusage>
 	</Row>
 	<Row>
 		<Text>Use reusable items instead of disposable ones</Text>
 		<carbonusage>0.017</carbonusage>
 	</Row>
 	<Row>
-		<Text>Reuse or recycle your ink cartridges</Text>
-		<carbonusage>0.24</carbonusage>
+		<Text>Use waste packaging for kids craft activities </Text>
+		<carbonusage>0.046</carbonusage>
+	</Row>
+	<Row>
+		<Text>Donate unwanted items to charity shops or community projects instead of binning them</Text>
+		<carbonusage>0.375</carbonusage>
+	</Row>
+	<Row>
+		<Text>Label your waste and recycling bins so everyone knows what should go in them</Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Re-use shredded paper, e.g. when packing products.  Or compost it.</Text>
+		<carbonusage>0.493</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy envelopes from recycled materials whenever possible</Text>
+		<carbonusage>0.197</carbonusage>
+	</Row>
+	<Row>
+		<Text>Do you have staff / company executive  names on your headed paper?  Change to a system where the relevant names are put in automatically by individual computers</Text>
+		<carbonusage>0.046</carbonusage>
+	</Row>
+	<Row>
+		<Text>Change computer / printer / photocopier settings so that double sided printing happens automatically.</Text>
+		<carbonusage>2.375</carbonusage>
+	</Row>
+	<Row>
+		<Text>Change computer / printer / photocopier settings so that double sided printing happens automatically.</Text>
+		<carbonusage>0.046</carbonusage>
+	</Row>
+	<Row>
+		<Text>Fax machine cover sheets - Print or photocopy fax machine cover sheets onto the back of one sided used paper until no one sided paper remaining.</Text>
+		<carbonusage>2.375</carbonusage>
+	</Row>
+	<Row>
+		<Text>Print or photocopy internal forms and notices onto the back of one sided used paper, until no one sided paper left.</Text>
+		<carbonusage>2.375</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy refilled printer cartridges</Text>
+		<carbonusage>0.462</carbonusage>
+	</Row>
+	<Row>
+		<Text>Remove disposable cups from your drinking water dispenser.  Use glasses instead.</Text>
+		<carbonusage>0.023</carbonusage>
+	</Row>
+	<Row>
+		<Text>Replace bottled drinking water dispensers with a water cooler / filter</Text>
+		<carbonusage>0.45</carbonusage>
+	</Row>
+	<Row>
+		<Text>When you buy new desks etc. for the office, consider getting good quality second hand ones</Text>
+		<carbonusage>6.148</carbonusage>
+	</Row>
+	<Row>
+		<Text>If you still use disposable cups and plates in your workplace, replace these with biodegradable alternatives, or join a local plastic cup recycling scheme</Text>
+		<carbonusage>0.008</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy recycled paper stationery and filing products.  Most large stationery companies now stock these products </Text>
+		<carbonusage>6.6</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy recycled paper stationery and filing products.  Most large stationery companies now stock these products </Text>
+		<carbonusage>0.127</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Recycle your old bike</Text>
+		<carbonusage>2.077</carbonusage>
+	</Row>
+	<Row>
+		<Text>Make notebooks from scrap paper</Text>
+		<carbonusage>0.046</carbonusage>
+	</Row>
+	<Row>
+		<Text>Make sure your old mobile phones and other gadgets don’t end up in the bin. Take them to a charity shop or recycle them.</Text>
+		<carbonusage>0.558</carbonusage>
+	</Row>
+	<Row>
+		<Text>'Ensure that recycling bins have been put out on correct days</Text>
+		<carbonusage>0</carbonusage>
+	</Row>
+	<Row>
+		<Text>Buy items with less packaging</Text>
+		<carbonusage>0.038</carbonusage>
+	</Row>
+	<Row>
+		<Text>Write to organisations to stop them sending junk mail to you.</Text>
+		<carbonusage>0.087</carbonusage>
+	</Row>
+	<Row>
+		<Text>Register with the Mailing Preference Service  to reduce junk mail</Text>
+		<carbonusage>0.087</carbonusage>
+	</Row>
+	<Row>
+		<Text>Register to opt out of the post office's Door to Door service</Text>
+		<carbonusage>0.023</carbonusage>
+	</Row>
+	<Row>
+		<Text>Use online services</Text>
+		<carbonusage>0.004</carbonusage>
+	</Row>
+	<Row>
+		<Text>Opt out of the edited version of the electoral register</Text>
+		<carbonusage>0.015</carbonusage>
+	</Row>
+	<Row>
+		<Text>Go through the mail being sent to you/your business and think about whether you need to receive it</Text>
+		<carbonusage>0.046</carbonusage>
+	</Row>
+	<Row>
+		<Text>Consider starting a home, school or work composting scheme</Text>
+		<carbonusage>0.974</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Try to get clothes repaired instead of buying new ones</Text>
+		<carbonusage>0.375</carbonusage>
+	</Row>
+	<Row>
+		<Text>Long term action: Swap or recycle children’s toys</Text>
+		<carbonusage>0.06</carbonusage>
+	</Row>
+	<Row>
+		<Text>Increase the amount of waste that gets recycled in your business by ensuring that employees are trained, valued, recognised and rewarded. Start changing the perception of this activity as being crucial and integral to the business.</Text>
+		<carbonusage>0.713</carbonusage>
 	</Row>
 </Table>

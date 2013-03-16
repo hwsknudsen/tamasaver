@@ -75,29 +75,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int wink3=0x7f020029;
     }
     public static final class id {
-        public static final int ImageButton01=0x7f0b0006;
-        public static final int ImageButton02=0x7f0b0005;
-        public static final int ImageButton03=0x7f0b0008;
-        public static final int ImageButton04=0x7f0b000c;
-        public static final int ImageButton05=0x7f0b000b;
-        public static final int ImageButton06=0x7f0b000d;
-        public static final int ImageButton07=0x7f0b0007;
-        public static final int ImageButton08=0x7f0b000a;
-        public static final int ImageView03=0x7f0b0002;
-        public static final int ImageView04=0x7f0b0003;
-        public static final int ImageView05=0x7f0b0001;
-        public static final int LinearLayout01=0x7f0b0004;
-        public static final int LinearLayout02=0x7f0b0009;
+        public static final int ImageButton01=0x7f0b0007;
+        public static final int ImageButton02=0x7f0b0006;
+        public static final int ImageButton03=0x7f0b0009;
+        public static final int ImageButton04=0x7f0b000d;
+        public static final int ImageButton05=0x7f0b000c;
+        public static final int ImageButton06=0x7f0b000e;
+        public static final int ImageButton07=0x7f0b0008;
+        public static final int ImageButton08=0x7f0b000b;
+        public static final int ImageView03=0x7f0b0003;
+        public static final int ImageView04=0x7f0b0004;
+        public static final int ImageView05=0x7f0b0002;
+        public static final int LinearLayout01=0x7f0b0005;
+        public static final int LinearLayout02=0x7f0b000a;
         public static final int TableLayout1=0x7f0b0014;
         public static final int button1=0x7f0b0015;
         public static final int checkBox1=0x7f0b0012;
         public static final int checkBox2=0x7f0b0013;
-        public static final int imageView1=0x7f0b0000;
+        public static final int imageView1=0x7f0b0001;
         public static final int imageView2=0x7f0b0011;
         public static final int imageView3=0x7f0b0010;
+        public static final int menu_about=0x7f0b0017;
         public static final int menu_settings=0x7f0b0016;
-        public static final int pager=0x7f0b000e;
-        public static final int textView1=0x7f0b000f;
+        public static final int pager=0x7f0b000f;
+        public static final int textView1=0x7f0b0000;
     }
     public static final class integer {
         /**  dispatch in seconds 
@@ -106,16 +107,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ga_dispatchPeriod=0x7f070000;
     }
     public static final class layout {
-        public static final int activity_awards=0x7f030000;
-        public static final int activity_home=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int explanation=0x7f030003;
-        public static final int fragmentwelcome=0x7f030004;
-        public static final int gameoverlay=0x7f030005;
-        public static final int prefrence=0x7f030006;
-        public static final int setupchoices=0x7f030007;
-        public static final int setupcomplete=0x7f030008;
-        public static final int tamalayout=0x7f030009;
+        public static final int about=0x7f030000;
+        public static final int activity_awards=0x7f030001;
+        public static final int activity_home=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int explanation=0x7f030004;
+        public static final int fragmentwelcome=0x7f030005;
+        public static final int gameoverlay=0x7f030006;
+        public static final int prefrence=0x7f030007;
+        public static final int setupchoices=0x7f030008;
+        public static final int setupcomplete=0x7f030009;
+        public static final int tamalayout=0x7f03000a;
     }
     public static final class menu {
         public static final int activity_home=0x7f0a0000;
@@ -125,6 +127,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int thecarbondata=0x7f040000;
     }
     public static final class string {
+        public static final int abouttext=0x7f050017;
         public static final int app_name=0x7f050001;
         public static final int complete=0x7f05000b;
         public static final int dummy_button=0x7f050013;

@@ -1,6 +1,7 @@
 package com.hwsknudsen.tamasaver;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import com.google.analytics.tracking.android.EasyTracker;
@@ -10,6 +11,7 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Resources.Theme;
 import android.database.Cursor;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -21,6 +23,7 @@ public class Game {
 	static float currentchoice = -1;
 	static boolean win;
 
+	//static float max = -1;
 
 	public Game(Context context) {
 		this.context = context;
@@ -33,22 +36,25 @@ public class Game {
 
 		mythree.moveToFirst();
 
-		final String one = mythree.getString(mythree.getColumnIndex("Field1"));
 		final float onedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+		final String one = mythree.getString(mythree.getColumnIndex("Field1"));//+":"+onedata;
 
 		mythree.moveToNext();
-		final String two  = mythree.getString(mythree.getColumnIndex("Field1"));
 		final float twodata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+		final String two  = mythree.getString(mythree.getColumnIndex("Field1"));//+":"+twodata;
 
 		mythree.moveToNext();
-		final String three = mythree.getString(mythree.getColumnIndex("Field1"));
 		final float threedata = Float.parseFloat(mythree.getString(mythree.getColumnIndex("Field2")));
+		final String three = mythree.getString(mythree.getColumnIndex("Field1"));//+":"+threedata;
 
 		final CharSequence[] items = {one, two, three};
 
-
 		win = false;
 
+		final float max = Math.max(threedata, Math.max(onedata, twodata));
+
+		Log.e("game",String.valueOf(max));
+		
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				context);
 		builder.setTitle("Which Saves The most Energy?");
@@ -62,7 +68,7 @@ public class Game {
 					Game.myGame(Game.context);
 
 					
-				}else if (currentchoice >= onedata && currentchoice >= twodata && currentchoice >= threedata){
+				}else if (currentchoice == max){
 
 					EasyTracker.getTracker().sendEvent("game", "action", "win", null);
 
@@ -122,11 +128,15 @@ public class Game {
 
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int item) {
-				switch (item) {
-				case 0: currentchoice = onedata;
-				case 1: currentchoice = twodata;
-				case 2: currentchoice = threedata;
+				Log.e("game",String.valueOf(item));
+				if (item==0) {
+				currentchoice = onedata;
+				}else if (item==1) {
+					currentchoice = twodata;
+				}else if (item==2) {
+					currentchoice = threedata;
 				}
+				Log.e("game",String.valueOf(currentchoice));
 
 			}
 		});
@@ -140,11 +150,12 @@ public class Game {
 			float threedata) {
 
 		final List<sortabletype> numbers = new ArrayList<sortabletype>();
-		numbers.add(new sortabletype(one, onedata));
-		numbers.add(new sortabletype(two, twodata));
-		numbers.add(new sortabletype(three, threedata));
 		
-		Collections.sort(numbers);
+		numbers.add(new sortabletype(onedata, one));
+		numbers.add(new sortabletype(twodata, two));
+		numbers.add(new sortabletype(threedata, three));
+		
+        Collections.sort(numbers);
 		
 		int twoequal = 2;
 		if (numbers.get(0).value==numbers.get(1).value){
@@ -159,7 +170,7 @@ public class Game {
 			twoequal = 2;
 		}
 
-		final CharSequence[] items = {1+". "+numbers.get(0).text, twoequal+". "+numbers.get(1).text, threequal+". "+numbers.get(2).text};
+		final CharSequence[] items = {1+". "+numbers.get(2).text, twoequal+". "+numbers.get(1).text, threequal+". "+numbers.get(0).text};
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				context);
