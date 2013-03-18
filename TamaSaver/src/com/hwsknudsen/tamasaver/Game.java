@@ -59,7 +59,7 @@ public class Game {
 				context);
 		builder.setTitle("Which Saves The most Energy?");
 
-		builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+		builder.setPositiveButton("Submit",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
 				if (currentchoice==-1){
 					EasyTracker.getTracker().sendEvent("game", "action", "nochoice", null);

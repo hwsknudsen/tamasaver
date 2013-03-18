@@ -415,8 +415,8 @@ public class Main extends Activity{
 			changebasefaceduetomood();
 		} else if(currentmood>=1000){
 			new AlertDialog.Builder(context)
-			.setTitle("Gretness !")
-			.setMessage("You have achieved energy saving enlightenment? Would you like to start again?")
+			.setTitle("Greatness !")
+			.setMessage("You have achieved energy saving enlightenment. Would you like to start again?")
 			.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) { 
 					currentmood=500;
