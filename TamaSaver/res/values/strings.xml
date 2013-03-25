@@ -9,20 +9,20 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Tama Saver</string>
-    <string name="welcome_text">Welcome To TamaSaver an app to encourage you to save energy. In A Friendly Helpful Manner, In order to do this we will need to ask some questions about your environment. \n\nPlease Swipe To the right to Continue</string>
+    <string name="welcome_text">Welcome to TamaSaver an app to encourage you to save energy, in a friendly and helpful manner. In order to do this we will need to ask some questions about your environment. \n\nPlease swipe to the left to continue</string>
     <string name="title_activity_home">Tama Saver</string>
     <string name="complete">Complete</string>
     <string name="prefsfilename">prefsfile</string>
-    <string name="renter">Do you Live in Rented Accommodation </string>
-    <string name="placeofwork">Do You work In an Institution?</string>
+    <string name="renter">Do you live in rented accommodation? </string>
+    <string name="placeofwork">Do you work in an institution?</string>
     <string name="gamehints">Do want hints to help you improve if you don’t win at the game?</string>
     <string name="gamebutton">Game</string>
     <string name="menu_awards">Awards</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="title_activity_awards">Awards</string>
-    <string name="welcomeexplanation">TamaSaver will hopefully encourage you to save energy and learn about saving energy thought A simple game and a basic playful interaction. The game can be started form the home screen by choosing the dice and doing well at the game will result in the TamaSaver Character becoming happier although losing will result in the character being sadder. To Try The Game Now Click Below</string>
-    <string name="introduction">The home screen of the application consists of a series of buttons describing areas where energy may be saved in your life. You are encouraged to push a button when feel you have saved energy  in one of them, doing this regularly will keep your character happy and well feed, failing to save energy will result in the character feeling neglected. The buttons are shown below.</string>
+    <string name="welcomeexplanation">TamaSaver will hopefully encourage you to save energy and learn about saving energy through a simple game and basic playful interaction with a character. The game can be started form the home screen by choosing the dice and doing well at the game will result in the TamaSaver character becoming happier although losing will result in the character being sadder. To try the game now click below</string>
+    <string name="introduction">The home screen of this application consists of a series of buttons describing areas where energy may be saved in your life. You are encouraged to push a button when you feel that you have saved energy in one of the areas. Doing this regularly will keep your character happy and well fed, failing to save energy will result in the character feeling neglected. The buttons and energy saving areas are shown below.</string>
     <string name="abouttext">About: \nMany Thanks For using this application, this application makes use of a data source from :\"Glasgow Caledonian University (2010). Carbon Cutter Tool for Going Carbon Neutral Stirling.  Used with kind permission of Going Carbon Neutral Scotland. \"</string>
 
 </resources>

@@ -5,25 +5,25 @@
     <CheckBoxPreference
         android:defaultValue="false"
         android:key="home"
-        android:summary=""
-        android:title="@string/renter" />
+        android:summary="@string/renter"
+        android:title="Rented Accommodation?" />
 
     <CheckBoxPreference
         android:defaultValue="false"
         android:key="work"
-        android:summary=""
-        android:title="@string/placeofwork" />
+        android:summary="@string/placeofwork"
+        android:title="Workplace?" />
 
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="easygame"
         android:summary="@string/gamehints"
-        android:title="Give Game Hints" />
+        android:title="Give game hints" />
     
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="reminder"
-        android:summary="Can tamasaver remind you to save energy daily?"
+        android:summary="Can TamaSaver remind you to save energy daily?"
         android:title="Daily Reminder" />
 
 </PreferenceScreen>
